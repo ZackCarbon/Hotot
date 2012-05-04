@@ -100,10 +100,10 @@
 		"description": "data/js/ui.welcome.js"
 	},
 	"charactor_at_is_not_allow_in_profile_prefix": {
-		"message": "Character `@` is not allowed in profile prefix",
+		"message": "Character '@' is not allowed in profile prefix",
 		"description": "data/js/ui.welcome.js"
 	},
-	"chrome_context_menu_integration": {
+	"chrome_xt_menu_integration": {
 		"message": "Chrome context menu integration",
 		"description": "data/index.html"
 	},
@@ -120,7 +120,7 @@
 		"description": "data/index.html"
 	},
 	"click_me_to_continue": {
-		"message": "Click Me to Continue",
+		"message": "Click me to continue",
 		"description": "data/index.html"
 	},
 	"click_the_button_below": {
@@ -180,7 +180,7 @@
 		"description": "data/index.html"
 	},
 	"default_picture_service": {
-		"message": "Default Picture Service",
+		"message": "Default picture service",
 		"description": "data/index.html"
 	},
 	"delete": {
@@ -192,7 +192,7 @@
 		"description": "data/js/ui.template.js"
 	},
 	"destroy_successfully": {
-		"message": "Destroyed Successfully!",
+		"message": "Destroyed successfully!",
 		"description": "data/js/ui.main.js"
 	},
 	"disable": {
@@ -248,11 +248,11 @@
 		"description": "data/js/ui.exts_dlg.js"
 	},
 	"enable_proxy": {
-		"message": "Enable Proxy",
+		"message": "Enable proxy",
 		"description": "data/index.html"
 	},
 	"enable_verbose_mode": {
-		"message": "Enable Verbose Mode",
+		"message": "Enable verbose mode",
 		"description": "data/index.html"
 	},
 	"enabled": {
@@ -332,7 +332,7 @@
 		"description": "data/index.html"
 	},
 	"font_size": {
-		"message": "Font Size",
+		"message": "Font size",
 		"description": "data/index.html"
 	},
 	"friend_cnt": {
@@ -436,7 +436,7 @@
 		"description": "data/index.html"
 	},
 	"label_with_color": {
-		"message": "Label with Color",
+		"message": "Label With Color",
 		"description": "data/index.html"
 	},
 	"language": {
@@ -444,7 +444,7 @@
 		"description": "data/index.html"
 	},
 	"let_hotot_collects_anonymous_statistic_information": {
-		"message": "Let Hotot collects anonymous statistic information",
+		"message": "Let Hotot collect anonymous statistic information",
 		"description": "data/index.html"
 	},
 	"license": {
@@ -472,11 +472,11 @@
 		"description": "data/js/ui.template.js"
 	},
 	"loading_dots": {
-		"message": "Loading... ",
+		"message": "Loading...",
 		"description": "data/js/ui.template.js"
 	},
 	"loading_resources_hint": {
-		"message": "Loading Resources...",
+		"message": "Loading resources...",
 		"description": "data/index.html"
 	},
 	"location": {
@@ -520,7 +520,7 @@
 		"description": "data/js/ui.template.js"
 	},
 	"more_effects_like_shadows_and_glow_of_widgets": {
-		"message": "More effects like shadows and glow of widgets",
+		"message": "More effects like shadows and glow of widgets.",
 		"description": "data/index.html"
 	},
 	"move_to_bottom": {
@@ -568,7 +568,7 @@
 		"description": "data/js/ui.welcome.js"
 	},
 	"new_profile_has_been_created": {
-		"message": "New profile has been created!",
+		"message": "A new profile has been created!",
 		"description": "data/js/ui.welcome.js"
 	},
 	"next": {
@@ -596,7 +596,7 @@
 		"description": "data/index.html"
 	},
 	"oops_a_network_error_occurs": {
-		"message": "Oops, a network error occured",
+		"message": "Oops, a network error occured!",
 		"description": "data/js/ui.welcome.js"
 	},
 	"oops_an_api_error_occurs": {
@@ -644,7 +644,7 @@
 		"description": "data/index.html"
 	},
 	"please_enter_the_recipient": {
-		"message": "Please enter the recipient!",
+		"message": "Please enter a recipient!",
 		"description": "data/js/ui.status_box.js"
 	},
 	"please_entry_a_profile_prefix": {
@@ -668,7 +668,7 @@
 		"description": "data/index.html"
 	},
 	"preload_latest_tweets_in_conversations_if_possible": {
-		"message": "Preload latest tweets in conversations if possible.",
+		"message": "Preload latest tweets in conversations if possible",
 		"description": "data/index.html"
 	},
 	"press_ctrl_and_enter_to_update": {
@@ -684,11 +684,11 @@
 		"description": "data/index.html"
 	},
 	"preview_embedded_media": {
-		"message": "Preview Embedded Media",
+		"message": "Preview embedded media",
 		"description": "data/index.html"
 	},
 	"preview_here": {
-		"message": "Preview Here",
+		"message": "Preview here",
 		"description": "data/index.html"
 	},
 	"profile": {
