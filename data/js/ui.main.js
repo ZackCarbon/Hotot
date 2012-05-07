@@ -79,7 +79,7 @@ function init () {
 hide:
 function hide () {
     daemon.stop();
-    ui.StatusBox.hide();
+    ui.StatusBox.close();
     globals.signed_in = false;
     this.me.hide();
 },
@@ -695,8 +695,12 @@ function on_reply_click(btn, li_id, event) {
 
     ui.StatusBox.reply_to_id = id;
     ui.StatusBox.set_reply_info(screen_name, text);
-    if (orig_text.indexOf('@'+screen_name) == -1) {
-        ui.StatusBox.insert_status_text('@' + li.attr('screen_name') + ' ', null);
+    if (event && event.shiftKey) {
+        if (orig_text.indexOf('@'+screen_name) == -1) {
+            ui.StatusBox.insert_status_text('@' + li.attr('screen_name') + ' ', null);
+        }
+    } else {
+        ui.StatusBox.set_status_text("@" + screen_name + ' ');
     }
     ui.StatusBox.open(
     function() {
@@ -712,7 +716,7 @@ function on_rt_click(btn, li_id, event) {
     var _text = $(li.find('.text')[0]);
     var text = _text.attr('alt') || _text.text();
 
-    ui.StatusBox.set_status_text("RT @" + screen_name
+    ui.StatusBox.set_status_text(" RT @" + screen_name
         + ': ' + text + ' ');
     ui.StatusBox.open(
     function() {
@@ -767,7 +771,11 @@ function on_reply_all_click(btn, li_id, event) {
 
     ui.StatusBox.reply_to_id = id;
     ui.StatusBox.set_reply_info(screen_name, text);
-    ui.StatusBox.append_status_text(who_names.join(' ') + ' ');
+    if (event && event.shiftKey) {
+        ui.StatusBox.append_status_text(who_names.join(' ') + ' ');
+    } else {
+        ui.StatusBox.set_status_text(who_names.join(' ') + ' ');
+    }
     ui.StatusBox.open(
     function() {
         ui.StatusBox.move_cursor(ui.StatusBox.POS_END);
@@ -782,6 +790,7 @@ function on_dm_click(btn, li_id, event) {
     var screen_name = (li.attr('screen_name') == '' || li.attr('screen_name') == undefined)
         ?li.attr('sender_screen_name'):li.attr('screen_name');
     ui.StatusBox.set_dm_target(screen_name);
+    ui.StatusBox.set_status_text('');
     ui.StatusBox.open(
     function () {
         ui.StatusBox.change_mode(ui.StatusBox.MODE_DM);

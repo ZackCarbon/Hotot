@@ -178,7 +178,7 @@ function open_list(screen_name, slug, additional_opts, in_background) {
     ui.Slider.add(name
         , {title: title, icon:'image/ic_list.png'}
         , $.extend({   'type': 'list', 'title': title
-            , 'load': ui.ListView.load_timeline
+            , 'load': ui.ListView.load_timeline_full
             , 'loadmore': ui.ListView.loadmore_timeline
             , 'load_success': ui.Main.load_tweet_success
             , 'load_fail': null
@@ -358,7 +358,7 @@ function init_dialogs() {
     globals.list_attr_dialog.create();
 
     globals.add_to_list_dialog = new widget.Dialog('#add_to_list_dlg');
-    globals.add_to_list_dialog.resize(400, 260);
+    globals.add_to_list_dialog.resize(400, 500);
     globals.add_to_list_dialog.create();
 
     globals.prefs_dialog = new widget.Dialog('#prefs_dlg');
@@ -447,7 +447,11 @@ function init_hotkey() {
     });
     // 'c' to compose
     hotkey.register("c",
-        function () { ui.StatusBox.open();});
+    function () { 
+        ui.StatusBox.change_mode(ui.StatusBox.MODE_TWEET);
+        ui.StatusBox.set_status_text('');
+        ui.StatusBox.open();
+    });
     // Navigation
     hotkey.register(hotkey.calculate(38), "D", function () {
         ui.Main.move_by_offset(-50);
@@ -750,6 +754,7 @@ function on_load_finish() {
         $(window).dequeue('_on_load_finish');
     }
 }
+
 function track(vars) {
     var url = 'http://stat.hotot.org/?';
     var arr = [];
@@ -759,6 +764,50 @@ function track(vars) {
     url += arr.join('&');
     new Image().src = url;
     return;
+}
+
+function syncMyself() {
+    // sync block users
+    syncBlockingUsers();
+    // sync my lists
+    syncMyLists();
+    // @TODO sync following users
+}
+
+function syncBlockingUsers () {
+    var proc = function (result) {
+        globals.blocking_ids = globals.blocking_ids.concat(result.ids)
+        if (result.next_cursor_str !== '0') {
+            globals.twitterClient.get_blocking_ids(result.next_cursor_str, proc);
+        }
+    }
+    globals.twitterClient.get_blocking_ids(-1, 
+        function (result) {
+            globals.blocking_ids = []; 
+            proc(result);
+        }, 
+        function () {}
+    );
+}
+
+function syncMyLists () {
+    var proc = function (result) {
+        globals.my_lists = globals.my_lists.concat(result.lists)
+        if (result.next_cursor_str !== '0') {
+            globals.twitterClient.get_user_lists(
+                globals.myself.screen_name,
+                result.next_cursor_str,
+                proc);
+        }
+    }
+    globals.twitterClient.get_user_lists(
+        globals.myself.screen_name, -1,
+        function (result) {
+            globals.my_lists = []; 
+            proc(result);
+        }, 
+        function () {}
+    );
 }
 
 var globals = {
@@ -772,6 +821,8 @@ var globals = {
     , ratelimit_bubble: null
     , unread_alert_timer: null
     , unread_count: null
+    , blocking_ids: []
+    , my_lists: [],
 };
 
 jQuery(function($) {

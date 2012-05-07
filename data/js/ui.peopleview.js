@@ -26,23 +26,25 @@ function init_view(view) {
     ui.PeopleView.update_trans();
 
     var vcard = view._header.find('.people_vcard');
-    var vcard_profile_btns = vcard.find('.radio_group_btn');
-    vcard_profile_btns.click(function (event) {
+    vcard.find('.mochi_button_group_item').click(function () {
         var pagename = '.' + $(this).attr('href').substring(1);
-        vcard_profile_btns.removeClass('selected');
-        $(this).addClass('selected');
         vcard.find('.vcard_tabs_page').hide();
         vcard.find(pagename).show();
+
+        var a = $(this).attr("name");
+        $(".mochi_button_group_item[name=" + a + "]").not(this).removeClass("selected");
+        $(this).addClass("selected");
         return false;
     });
     var toggle = view._header.find('.people_view_toggle');
-    var sub_view_btns = toggle.find('.radio_group_btn');
+    var sub_view_btns = toggle.find('.mochi_button_group_item');
     sub_view_btns.click(function (event) {
         var pagename = $(this).attr('href').substring(1);
         if (pagename == 'list') {
             toggle.find('.lists_memu').toggle();
         } else {
-            sub_view_btns.removeClass('selected');
+            var a = $(this).attr("name");
+            sub_view_btns.not(this).removeClass('selected');
             $(this).addClass('selected');
             ui.PeopleView.switch_sub_view(view, pagename);
         }
@@ -58,7 +60,7 @@ function init_view(view) {
             function () {
                 toast.set(
                     _("unfollow_at")+ view.screen_name+" Successfully!").show();
-                $(_this).text(_("follow")).removeClass('unfo');
+                $(_this).text(_("follow")).removeClass('unfo').removeClass('red').addClass('blue');
             });
         } else {
             toast.set(_("follow_at") + view.screen_name + " ...").show();
@@ -66,7 +68,7 @@ function init_view(view) {
             function () {
                 toast.set(
                     _("follow_at")+ view.screen_name+" Successfully!").show();
-                $(_this).text(_("unfollow")).addClass('unfo');
+                $(_this).text(_("unfollow")).addClass('unfo').removeClass('blue').addClass('red');
             });
         }
     });
@@ -101,6 +103,7 @@ function init_view(view) {
     vcard.find('.message_menu_item').click(
     function (event) {
         ui.StatusBox.set_dm_target(view.screen_name);
+        ui.StatusBox.set_status_text('');
         ui.StatusBox.open(
         function () {
             ui.StatusBox.change_mode(ui.StatusBox.MODE_DM);
@@ -112,7 +115,7 @@ function init_view(view) {
 
     vcard.find('.add_to_list_menu_item').click(
     function (event) {
-        ui.AddToListDlg.load();
+        ui.AddToListDlg.load(view.screen_name);
         globals.add_to_list_dialog.open(); 
     });
 
@@ -122,9 +125,10 @@ function init_view(view) {
             return;
         toast.set("Block @" + view.screen_name + " ...").show();
         globals.twitterClient.create_blocks(view.screen_name,
-        function () {
+        function (result) {
             toast.set(
-                "Block @"+ view.screen_name+" Successfully!").show();
+                "Block @"+ result.screen_name+" Successfully!").show();
+            globals.blocking_ids.push(result.id_str);
         });
         people_action_more_memu.hide();
     });
@@ -133,9 +137,13 @@ function init_view(view) {
     function (event) {
         toast.set("Unblock @" + view.screen_name + " ...").show();
         globals.twitterClient.destroy_blocks(view.screen_name,
-        function () {
+        function (result) {
             toast.set(
-                "Unblock @"+ view.screen_name+" Successfully").show();
+                "Unblock @"+ result.screen_name+" Successfully").show();
+            var pos = globals.blocking_ids.indexOf(result.id_str);
+            if (pos !== -1) {
+                globals.blocking_ids.splice(pos, 1);
+            }
         });
         people_action_more_memu.hide();
     });
@@ -193,7 +201,7 @@ function init_view(view) {
     });
     
     lists_memu.find('.create_list_menu_item').click(function () {
-        ui.ListAttrDlg.load(globals.myself.screen_name,'', '', 'public');
+        ui.ListAttrDlg.load(globals.myself.screen_name,'');
         globals.list_attr_dialog.open(); 
         lists_memu.hide();
         return false;
@@ -320,7 +328,7 @@ function render_people_view(self, user_obj, proc) {
                     + user_obj.screen_name);
             self.protected_user = true;
         } else {
-            btn_follow.text(_("Follow"));
+            btn_follow.text(_("follow"));
             btn_follow.removeClass('unfo');
             proc();
             self.protected_user = false;
@@ -335,16 +343,19 @@ function render_people_view(self, user_obj, proc) {
                 ui.PeopleView.relation_icon_set[rel]
             );
             if (rel == 1 || rel == 3) {
-                btn_follow.text(_("Unfollow"));
+                btn_follow.text(_("unfollow"));
                 btn_follow.addClass('unfo');
+                btn_follow.addClass('red').removeClass('blue');
+            } else {
+                btn_follow.removeClass('red').addClass('blue');
             }
     });
+    ui.Slider.set_icon(self.name, user_obj.profile_image_url, ui.Slider.BOARD_ICON);
 },
 
 load_timeline_full:
 function load_timeline_full(view, success, fail) {
     var render_proc = function (user_obj) {
-        ui.Slider.set_icon(view.name, user_obj.profile_image_url, ui.Slider.BOARD_ICON);
         ui.PeopleView.render_people_view(view, user_obj 
             , function () {
                 globals.twitterClient.get_user_timeline(null, view.screen_name
