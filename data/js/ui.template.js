@@ -112,12 +112,14 @@ retweeted_by_t:
                 <a class="btn_tweet_thread" href="javascript:void(0);"></a>\
                 {%REPLY_TEXT%}\
             </div>\
+            <div style="clear:both;"></div>\
             <div class="tweet_source"> \
                 {%RETWEET_TEXT%} \
                 <span class="tweet_timestamp">\
                 <a class="tweet_link" target="_blank" href="{%TWEET_BASE_URL%}/{%TWEET_ID%}" title="{%TIMESTAMP%}">{%SHORT_TIMESTAMP%}</a>\
                 </span>\
                 {%TRANS_via%}: {%SOURCE%}\
+                <br/>\
                 {%TRANS_Retweeted_by%}: <a class="show" href="javascript:void(0)" title="{%TRANS_Click_to_show_retweeters%}"  tweet_id="{%TWEET_ID%}">{%TRANS_Show_retweeters%}</a>\
             </div>\
             <div class="tweet_retweeters" tweet_id="{%TWEET_ID%}"></div>\
@@ -1119,7 +1121,9 @@ function fill_people_vcard(user_obj, vcard_container) {
     vcard_container.find('.follower_cnt').text(user_obj.followers_count);
     vcard_container.find('.friend_cnt').text(user_obj.friends_count);
     vcard_container.find('.listed_cnt').text(user_obj.listed_count);
-    vcard_container.find('.bio').text('').text(user_obj.description);
+    vcard_container.find('.bio').unbind().empty().html(
+        ui.Template.form_text_raw(user_obj.description));
+    ui.Main.bind_tweet_text_action(vcard_container.find('.bio'));
     vcard_container.find('.location').text('').text(user_obj.location);
     vcard_container.find('.join').text(created_at_str);
     if (user_obj.url) {
@@ -1167,16 +1171,41 @@ function form_text(tweet) {
         , '$1@<a class="who_href" href="#$2">$2</a>');
     text = text.replace(ui.Template.reg_hash_tag
         , '$1<a class="hash_href" href="#$2">#$2</a>');
+    text = text.replace(/href="(http:\/\/hotot.in\/(\d+))"/g
+        , 'full_text_id="$2" href="$1"');
     text = text.replace(/[\r\n]\s+[\r\n]/g, '\n\n');
     text = text.replace(/\n/g, '<br/>');
     if (ui.Template.reg_is_rtl.test(text)) {
-        text = '<div align="right" dir="rtl">' + text + '</div>';
+        text = '<div class="text_inner" align="right" dir="rtl">' + text + '</div>';
+    } else {
+        text = '<div class="text_inner">' + text + '</div>';
     }
     if (conf.get_current_profile().preferences.use_media_preview) {
-        text += ui.Template.form_preview(tweet);
+        text += '<div class="preview">' 
+            + ui.Template.form_preview(tweet)
+            + '</div>';
     }
     return text;
 },
+
+form_text_raw:
+function form_text_raw(raw_text) {
+    var text = raw_text;
+    text = text.replace(ui.Template.reg_link_g, ' <a href="$1" target="_blank">$1</a>');
+    text = text.replace(/href="www/g, 'href="http://www');
+    text = text.replace(ui.Template.reg_list
+        , '$1@<a class="list_href" href="#$2">$2</a>');
+    text = text.replace(ui.Template.reg_user
+        , '$1@<a class="who_href" href="#$2">$2</a>');
+    text = text.replace(ui.Template.reg_hash_tag
+        , '$1<a class="hash_href" href="#$2">#$2</a>');
+    text = text.replace(/href="(http:\/\/hotot.in\/(\d+))"/g
+        , 'full_text_id="$2" href="$1"');
+    text = text.replace(/[\r\n]\s+[\r\n]/g, '\n\n');
+    text = text.replace(/\n/g, '<br/>');
+    return text;
+},
+
 
 form_media:
 function form_media(href, src, direct_url) {

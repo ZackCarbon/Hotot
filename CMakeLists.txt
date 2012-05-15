@@ -11,7 +11,7 @@ option(WITH_GIR "Use GIR as GTK Version" Off)
 option(WITH_QT "Enable Qt Version" On)
 option(WITH_KDE "Enable KDE4 integration for Qt" On)
 
-option(WITH_CHROME "Enable Chrome Version" Off)
+option(WITH_CHROME "Enable Chrome Version" On)
 
 # uninstall target
 configure_file(

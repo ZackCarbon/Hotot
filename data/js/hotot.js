@@ -466,11 +466,11 @@ function init_hotkey() {
         ui.Main.move_by_offset(500);
         return false;
     });
-    hotkey.register(hotkey.calculate(36), "U", function () {
+    hotkey.register(hotkey.calculate(36), "D", function () {
         ui.Main.move_to_tweet("top");
         return false;
     });
-    hotkey.register(hotkey.calculate(35), "U", function () {
+    hotkey.register(hotkey.calculate(35), "D", function () {
         ui.Main.move_to_tweet("bottom");
         return false;
     });
@@ -629,6 +629,7 @@ function overlay_variables(vars) {
     hotot_log('init', 'overlay_variables()');
     if (util.is_native_platform()) {
         // native variables
+        conf.vars.wrapper = vars.wrapper;
         conf.vars.conf_dir = vars.conf_dir;
         conf.vars.cache_dir = vars.cache_dir;
         conf.vars.avatar_cache_dir = vars.avatar_cache_dir;
@@ -768,6 +769,13 @@ function syncMyself() {
     // sync my lists
     syncMyLists();
     // @TODO sync following users
+    db.get_screen_names(
+    function (tx, rs) {
+        globals.conversant = [];
+        for (var i = 0, l = rs.rows.length; i < l; i += 1) { 
+            globals.conversant.push(rs.rows.item(i).screen_name)
+        }
+    });
 }
 
 function syncBlockingUsers () {
@@ -818,7 +826,8 @@ var globals = {
     , unread_alert_timer: null
     , unread_count: null
     , blocking_ids: []
-    , my_lists: [],
+    , my_lists: []
+    , conversant: []
 };
 
 jQuery(function($) {
