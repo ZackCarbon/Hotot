@@ -1,4 +1,8 @@
 {
+	"a_new_hope": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"about": {
 		"message": "Σχετικά",
 		"description": "data/index.html"
@@ -31,6 +35,10 @@
 		"message": "Για προχωρημένους",
 		"description": "data/index.html"
 	},
+	"animation": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"api_base": {
 		"message": "Βάση API",
 		"description": "data/index.html"
@@ -41,6 +49,10 @@
 	},
 	"archive": {
 		"message": "Ιστορικό",
+		"description": "data/index.html"
+	},
+	"artwork_by": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"assassin_s_tango": {
@@ -55,16 +67,12 @@
 		"message": "Δημιουργός",
 		"description": "data/js/ui.exts_dlg.js"
 	},
-	"auto_update": {
-		"message": "Αυτόματη ενημέρωση",
+	"auto_longer_tweet": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"automatically_sign_in_after_opening": {
 		"message": "Αυτόματη σύνδεση",
-		"description": "data/index.html"
-	},
-	"balance_between_attractiveness_and_preformance": {
-		"message": "Ισοροποία μεταξύ ελκυστικότητα και απόδοσης.",
 		"description": "data/index.html"
 	},
 	"behavior": {
@@ -91,6 +99,10 @@
 		"message": "Υπήρξε σφάλμα στην πιστοποίηση! Παρακαλώ ελέγξτε το όνομα χρήστη, το κωδικό και την βάση του API",
 		"description": "data/js/ui.welcome.js"
 	},
+	"change_your_profile_picture_by_clicking_it": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"charactor_at_is_not_allow_in_profile_prefix": {
 		"message": "Ο χαρακτήρας `@` δεν επιτρέπεται στο prefix του προφίλ",
 		"description": "data/js/ui.welcome.js"
@@ -99,8 +111,8 @@
 		"message": "Chrome context menu integration",
 		"description": "data/index.html"
 	},
-	"clean_token": {
-		"message": "Εκκαθάριση τεκμηρίου",
+	"classic": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"clear": {
@@ -109,6 +121,10 @@
 	},
 	"clear_and_close": {
 		"message": "Εκκαθάριση και κλείσιμο",
+		"description": "data/index.html"
+	},
+	"clear_token": {
+		"message": "Εκκαθάριση τεκμηρίου",
 		"description": "data/index.html"
 	},
 	"click_me_to_continue": {
@@ -123,6 +139,10 @@
 		"message": "Πατήστε εδώ για σύνθεση μυνήματος",
 		"description": "data/index.html"
 	},
+	"click_to_expand_menu": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"click_to_show": {
 		"message": "Πατήστε εδώ για εμφάνιση",
 		"description": "data/js/ui.template.js"
@@ -130,6 +150,10 @@
 	"click_to_show_retweeters": {
 		"message": "Πατήστε εδώ για εμφάνιση των retweeter",
 		"description": "data/js/ui.template.js"
+	},
+	"client_name1_client_name2": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"close": {
 		"message": "Κλείσιμο",
@@ -143,6 +167,10 @@
 		"message": "Σύνθεση",
 		"description": "data/index.html"
 	},
+	"compress_tweet": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"copy_the_pin_code_and_paste_it_into_the_box_below": {
 		"message": "Αντιγράψτε τον κωδικό PIN και επικολήστε τον παρακάτω",
 		"description": "data/index.html"
@@ -154,6 +182,10 @@
 	"create_a_list": {
 		"message": "Δημιουργεία λίστας",
 		"description": "data/js/ui.template.js"
+	},
+	"create_a_new_profile": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"credits": {
 		"message": "Συντελεστές",
@@ -183,11 +215,15 @@
 		"message": "Καταστράφηκε επιτυχημένα!",
 		"description": "data/js/ui.main.js"
 	},
-	"disable_decoration_of_widgets_and_some_animations": {
-		"message": "Απενεργοποίηση της διακόσμησης των widget και μερικών animation.",
+	"donate": {
+		"message": "",
 		"description": "data/index.html"
 	},
-	"donate": {
+	"donate_hint1": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"donate_hint2": {
 		"message": "",
 		"description": "data/index.html"
 	},
@@ -207,32 +243,44 @@
 		"message": "Αφήστε",
 		"description": "data/index.html"
 	},
+	"drop_tweets_contain_hash_tag_nowplaying": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_contain_word_abc": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_retweeted_by_abc": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_sent_by_abc": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_sent_from_foursquare": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"edit": {
 		"message": "Επεξεργασία",
 		"description": "data/js/ui.template.js"
 	},
-	"effects": {
-		"message": "Εφέ",
-		"description": "data/index.html"
-	},
-	"effects_extra": {
-		"message": "Πολλά",
-		"description": "data/index.html"
-	},
-	"effects_low": {
-		"message": "Λίγα",
-		"description": "data/index.html"
-	},
-	"effects_normal": {
-		"message": "Κανονικά",
+	"eg_alt_h": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"enable": {
 		"message": "Ενεργοποίηση",
 		"description": "data/js/ui.exts_dlg.js"
 	},
-	"enable_proxy": {
-		"message": "Ενεργοποίηση Proxy",
+	"enable_animation": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"enable_gpu_acceleration": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"enable_verbose_mode": {
@@ -270,6 +318,10 @@
 	"favs_view": {
 		"message": "Αγαπημένα",
 		"description": "data/index.html"
+	},
+	"fellowship": {
+		"message": "",
+		"description": "data/js/ui.template.js"
 	},
 	"filter_tweets_like_it": {
 		"message": "Φιλτράρισμα των tweet σαν αυτό",
@@ -339,6 +391,10 @@
 		"message": "Βοήθεια",
 		"description": "data/index.html"
 	},
+	"hey": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"hey_it_is_you": {
 		"message": "Εσύ είσαι!",
 		"description": "data/js/ui.peopleview.js"
@@ -361,6 +417,10 @@
 	},
 	"hotot": {
 		"message": "Hotot",
+		"description": "data/index.html"
+	},
+	"hotot_description": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"image_uploader": {
@@ -427,6 +487,22 @@
 		"message": "Άδεια",
 		"description": "data/index.html"
 	},
+	"license_text1": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"license_text2": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"license_text3": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"line_height": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"list": {
 		"message": "Λίστα",
 		"description": "data/index.html"
@@ -467,6 +543,10 @@
 		"message": "Μάσκα",
 		"description": "data/index.html"
 	},
+	"mask_tweets_contain_hash_tag_callmemaybe": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"mention_them": {
 		"message": "Αναφορά",
 		"description": "data/js/ui.template.js"
@@ -491,10 +571,6 @@
 		"message": "Περισσότερα",
 		"description": "data/js/ui.template.js"
 	},
-	"more_effects_like_shadows_and_glow_of_widgets": {
-		"message": "Περισσότερα εφέ όπως σκιές και λάμψεις στα widget",
-		"description": "data/index.html"
-	},
 	"move_to_bottom": {
 		"message": "Μετακίνηση στο τέλος",
 		"description": "data/index.html"
@@ -509,6 +585,18 @@
 	},
 	"move_to_top": {
 		"message": "Μετακίνηση στην αρχή",
+		"description": "data/index.html"
+	},
+	"mute_by_containing_words": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"mute_by_source": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"mute_by_user_name": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"mute_filter": {
@@ -551,8 +639,16 @@
 		"message": "No Extension",
 		"description": "data/index.html"
 	},
+	"not_avaiable_yet": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"notify": {
 		"message": "Ειδοποίηση",
+		"description": "data/index.html"
+	},
+	"notify_me_if_incoming_tweets_mention_hotot": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"oauth_base": {
@@ -651,10 +747,6 @@
 		"message": "Pretty wife",
 		"description": "data/index.html"
 	},
-	"preview": {
-		"message": "Προεπισκόπηση",
-		"description": "data/index.html"
-	},
 	"preview_embedded_media": {
 		"message": "Προεπισκόπηση ενσωματωμένων media",
 		"description": "data/index.html"
@@ -663,12 +755,56 @@
 		"message": "Προεπισκόπηση εδώ",
 		"description": "data/index.html"
 	},
+	"previous": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"profile": {
 		"message": "Προφίλ",
 		"description": "data/index.html"
 	},
+	"profile_name": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"project_host": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"project_site": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"proxy_auth": {
 		"message": "Πιστοποίηση",
+		"description": "data/index.html"
+	},
+	"proxy_host": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_http_proxy": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_no_proxy": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_port": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_socks_proxy": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_system_proxy": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"quick_references": {
@@ -681,6 +817,14 @@
 	},
 	"quote": {
 		"message": "Παράθεση",
+		"description": "data/index.html"
+	},
+	"read_later": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"read_later_service": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"relation": {
@@ -787,6 +931,10 @@
 		"message": "Σχιζοφρένεια",
 		"description": "data/index.html"
 	},
+	"screen_name1_screen_name2": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"search": {
 		"message": "Αναζήτηση",
 		"description": "data/js/ui.slider.js"
@@ -813,6 +961,14 @@
 	},
 	"select_a_language": {
 		"message": "Επιλογή γλώσσας",
+		"description": "data/index.html"
+	},
+	"select_a_read_later_service": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"select_a_theme": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"select_actions": {
@@ -867,10 +1023,6 @@
 		"message": "Κάποιο σφάλμα συνέβη",
 		"description": "data/index.html"
 	},
-	"sound": {
-		"message": "Ήχος",
-		"description": "data/index.html"
-	},
 	"starts_minimized": {
 		"message": "Ξεκίνα ελαχιστοποιημένο",
 		"description": "data/index.html"
@@ -901,6 +1053,10 @@
 	},
 	"summon_hotot": {
 		"message": "Καλέστε το Hotot (όπως: <ALT>C)",
+		"description": "data/index.html"
+	},
+	"supervised_by": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"themes": {
@@ -935,14 +1091,6 @@
 		"message": "Διαφάνεια",
 		"description": "data/index.html"
 	},
-	"trending_topics": {
-		"message": "Τάσεις",
-		"description": "data/js/ui.slider.js"
-	},
-	"trending_topics_view": {
-		"message": "Προβολή τάσεων",
-		"description": "data/index.html"
-	},
 	"tweet_cnt": {
 		"message": "Tweet",
 		"description": "data/js/ui.template.js"
@@ -953,6 +1101,18 @@
 	},
 	"tweets": {
 		"message": "Tweets",
+		"description": "data/index.html"
+	},
+	"twitter_official_service": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"type_a_name_here": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"type_or_drag_a_photo_here": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"un_favorite_this_tweet_dots": {
@@ -1019,12 +1179,12 @@
 		"message": "Χρήση της παράθεσης ως προεπιλεγμένης ενέργειας retweet",
 		"description": "data/index.html"
 	},
-	"use_reply_all_as_default_reply_action": {
-		"message": "Χρήση της ΑΠΑΝΤΗΣΗΣ ΣΕ ΟΛΟΥΣ ως προεπιλεγμένης ενέργειας απάντησης",
+	"use_read_later_service": {
+		"message": "",
 		"description": "data/index.html"
 	},
-	"use_ubuntu_indicator": {
-		"message": "Χρήση Ubuntu Indicator",
+	"use_reply_all_as_default_reply_action": {
+		"message": "Χρήση της ΑΠΑΝΤΗΣΗΣ ΣΕ ΟΛΟΥΣ ως προεπιλεγμένης ενέργειας απάντησης",
 		"description": "data/index.html"
 	},
 	"username": {
@@ -1046,10 +1206,6 @@
 	"view_more_conversation": {
 		"message": "Περεταίρω προβολή συνομιλίας",
 		"description": "data/js/ui.template.js"
-	},
-	"view_original": {
-		"message": "Προβολή αυθεντικού",
-		"description": "data/index.html"
 	},
 	"virushou_s_integrity": {
 		"message": "Virushou's Integrity",
@@ -1075,6 +1231,18 @@
 		"message": "Ψίθυρος",
 		"description": "data/js/ui.welcome.js"
 	},
+	"word1_word2": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"write_down_description_here": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"written_by": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"you_are_followed_by_them": {
 		"message": "Σε ακολουθούν.",
 		"description": "data/js/ui.peopleview.js"
@@ -1090,5 +1258,17 @@
 	"you_are_not_following_each_other": {
 		"message": "Δεν ακολουθείτε ο ένας τον άλλον.",
 		"description": "data/js/ui.peopleview.js"
+	},
+	"you_dont_have_a_view": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"you_should_surely_add_one_or_more_views_by_clicking_the_add_button_above": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"your_profile": {
+		"message": "",
+		"description": "data/index.html"
 	}
 }

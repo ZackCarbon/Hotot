@@ -153,7 +153,8 @@ function open_people(screen_name, additional_opts, in_background) {
             , 'former': ui.Template.form_tweet
             , 'init': ui.PeopleView.init_view
             , 'destroy': ui.PeopleView.destroy_view
-            , 'header_html': ui.Template.people_vcard_t
+            , 'header_html': ui.Template.common_column_header_t
+            , 'header_html_ex': ui.Template.people_vcard_t
             , 'method': 'poll'
             , 'interval': 120
             , 'item_type': 'id'
@@ -183,7 +184,8 @@ function open_list(screen_name, slug, additional_opts, in_background) {
             , 'former': ui.Template.form_tweet
             , 'init': ui.ListView.init_view
             , 'destroy': ui.ListView.destroy_view
-            , 'header_html': ui.Template.list_vcard_t
+            , 'header_html': ui.Template.common_column_header_t
+            , 'header_html_ex': ui.Template.list_vcard_t
             , 'method': 'poll'
             , 'interval': 120
             , 'item_type': 'id'
@@ -212,6 +214,7 @@ function open_search(query, additional_opts, in_background) {
             , 'loadmore_fail': null
             , 'former': ui.Template.form_search
             , 'destroy': ui.SearchView.destroy_view
+            , 'header_html': ui.Template.common_column_header_t
             , 'method': 'poll'
             , 'interval': 120
             , 'item_type': 'phoenix_search'
@@ -311,6 +314,7 @@ function init(callback) {
     globals.twitterClient.network = globals.network;
     globals.twitterClient.oauth = new lib.OAuth();
     globals.twitterClient.oauth.network = globals.network;
+    globals.readLaterServ = new ReadLaterServ();
     var procs = [];
     procs.push(function() {
         db.init(function () {
@@ -416,6 +420,7 @@ function init_ui() {
     ui.Finder.init();
     ui.ActionMenu.init();
     ui.ContextMenu.init();
+    ui.Previewer = new widget.Previewer('#previewer');
     init_dialogs();
 
     widget.Scrollbar.register();
@@ -644,7 +649,7 @@ function on_load_finish() {
     // if native_platform
     //      wait until the webview is ready.
     if (util.is_native_platform() && globals.load_flags == 0) {
-        setTimeout(on_load_finish, 100);
+        setTimeout(on_load_finish, 1000);
     } else {
         hotot_log('init', 'on_load_finish()');
         globals.load_flags = 1;
@@ -656,19 +661,20 @@ function on_load_finish() {
                 $(window).dequeue('_on_load_finish');
             });
         });
-        procs.push(function() {
-            hotot_log('init', 'on_load_finish() -> ext.load_exts();');
-            ext.load_exts('extra', ext.extras, function () {
-                $(window).dequeue('_on_load_finish');
+        if (util.is_native_platform()) {
+            procs.push(function() {
+                hotot_log('init', 'on_load_finish() -> ext.load_exts();');
+                ext.load_exts('extra', ext.extras, function () {
+                    $(window).dequeue('_on_load_finish');
+                });
             });
-        });
+        }
         // init enabled extensions
         procs.push(function () {
             hotot_log('init', 'on_load_finish() -> ext.init_exts();');
             ext.init_exts();
             $(window).dequeue('_on_load_finish');
         });
-
         // 2. push settings to native platform
         if (util.is_native_platform()) {
             procs.push(function () {

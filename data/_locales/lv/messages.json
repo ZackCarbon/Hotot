@@ -1,4 +1,8 @@
 {
+	"a_new_hope": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"about": {
 		"message": "Par",
 		"description": "data/index.html"
@@ -31,6 +35,10 @@
 		"message": "Papildu",
 		"description": "data/index.html"
 	},
+	"animation": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"api_base": {
 		"message": "API bāze",
 		"description": "data/index.html"
@@ -41,6 +49,10 @@
 	},
 	"archive": {
 		"message": "Arhīvs",
+		"description": "data/index.html"
+	},
+	"artwork_by": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"assassin_s_tango": {
@@ -55,16 +67,12 @@
 		"message": "Autors",
 		"description": "data/js/ui.exts_dlg.js"
 	},
-	"auto_update": {
-		"message": "Atjaunot automātiski",
+	"auto_longer_tweet": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"automatically_sign_in_after_opening": {
 		"message": "Automātiski pieteikties pēc atvēršanas",
-		"description": "data/index.html"
-	},
-	"balance_between_attractiveness_and_preformance": {
-		"message": "Balanss starp pievilcību un ātrdarbību.",
 		"description": "data/index.html"
 	},
 	"behavior": {
@@ -91,6 +99,10 @@
 		"message": "Nevar autentificēt jūsu datus! Lūdzu, pārbaudiet savu lietotājvārdu/paroli un API bāzi",
 		"description": "data/js/ui.welcome.js"
 	},
+	"change_your_profile_picture_by_clicking_it": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"charactor_at_is_not_allow_in_profile_prefix": {
 		"message": "Simbos `@` nav atļauts kā profila prefikss",
 		"description": "data/js/ui.welcome.js"
@@ -99,8 +111,8 @@
 		"message": "",
 		"description": "data/index.html"
 	},
-	"clean_token": {
-		"message": "Notīrīt piekļuves kodu",
+	"classic": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"clear": {
@@ -109,6 +121,10 @@
 	},
 	"clear_and_close": {
 		"message": "Notīrīt un aizvērt",
+		"description": "data/index.html"
+	},
+	"clear_token": {
+		"message": "Notīrīt piekļuves kodu",
 		"description": "data/index.html"
 	},
 	"click_me_to_continue": {
@@ -123,6 +139,10 @@
 		"message": "Noklikšķiniet, lai rakstītu ziņu",
 		"description": "data/index.html"
 	},
+	"click_to_expand_menu": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"click_to_show": {
 		"message": "Noklikšķiniet, lai skatītu",
 		"description": "data/js/ui.template.js"
@@ -130,6 +150,10 @@
 	"click_to_show_retweeters": {
 		"message": "Noklikšķiniet, lai apskatītu retvītotājus",
 		"description": "data/js/ui.template.js"
+	},
+	"client_name1_client_name2": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"close": {
 		"message": "Aizvērt",
@@ -143,6 +167,10 @@
 		"message": "Rakstīt",
 		"description": "data/index.html"
 	},
+	"compress_tweet": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"copy_the_pin_code_and_paste_it_into_the_box_below": {
 		"message": "Nokopējiet PIN kodu un ielīmējiet zemāk esošajā lauciņā",
 		"description": "data/index.html"
@@ -154,6 +182,10 @@
 	"create_a_list": {
 		"message": "Izveidot sarakstu",
 		"description": "data/js/ui.template.js"
+	},
+	"create_a_new_profile": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"credits": {
 		"message": "Veidotāji",
@@ -183,11 +215,15 @@
 		"message": "Veiksmīgi iznīcināts!",
 		"description": "data/js/ui.main.js"
 	},
-	"disable_decoration_of_widgets_and_some_animations": {
-		"message": "Izslēgt sīkrīku dekorācijas un dažas animācijas.",
+	"donate": {
+		"message": "",
 		"description": "data/index.html"
 	},
-	"donate": {
+	"donate_hint1": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"donate_hint2": {
 		"message": "",
 		"description": "data/index.html"
 	},
@@ -207,32 +243,44 @@
 		"message": "Piliens",
 		"description": "data/index.html"
 	},
+	"drop_tweets_contain_hash_tag_nowplaying": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_contain_word_abc": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_retweeted_by_abc": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_sent_by_abc": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_sent_from_foursquare": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"edit": {
 		"message": "Rediģēt",
 		"description": "data/js/ui.template.js"
 	},
-	"effects": {
-		"message": "Efekti",
-		"description": "data/index.html"
-	},
-	"effects_extra": {
-		"message": "Ekstra",
-		"description": "data/index.html"
-	},
-	"effects_low": {
-		"message": "Nelieli",
-		"description": "data/index.html"
-	},
-	"effects_normal": {
-		"message": "Vidēji",
+	"eg_alt_h": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"enable": {
 		"message": "Ieslēgt",
 		"description": "data/js/ui.exts_dlg.js"
 	},
-	"enable_proxy": {
-		"message": "Ieslēgt proxy vārteju",
+	"enable_animation": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"enable_gpu_acceleration": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"enable_verbose_mode": {
@@ -270,6 +318,10 @@
 	"favs_view": {
 		"message": "Favorītu skats",
 		"description": "data/index.html"
+	},
+	"fellowship": {
+		"message": "",
+		"description": "data/js/ui.template.js"
 	},
 	"filter_tweets_like_it": {
 		"message": "Filtrēt šāda veida tvītus",
@@ -339,6 +391,10 @@
 		"message": "Palīdzība",
 		"description": "data/index.html"
 	},
+	"hey": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"hey_it_is_you": {
 		"message": "Hei, tas esi Tu!",
 		"description": "data/js/ui.peopleview.js"
@@ -361,6 +417,10 @@
 	},
 	"hotot": {
 		"message": "Hotot",
+		"description": "data/index.html"
+	},
+	"hotot_description": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"image_uploader": {
@@ -427,6 +487,22 @@
 		"message": "Licence",
 		"description": "data/index.html"
 	},
+	"license_text1": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"license_text2": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"license_text3": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"line_height": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"list": {
 		"message": "Saraksts",
 		"description": "data/index.html"
@@ -467,6 +543,10 @@
 		"message": "Maska",
 		"description": "data/index.html"
 	},
+	"mask_tweets_contain_hash_tag_callmemaybe": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"mention_them": {
 		"message": "Pieminējums",
 		"description": "data/js/ui.template.js"
@@ -491,10 +571,6 @@
 		"message": "Vairāk",
 		"description": "data/js/ui.template.js"
 	},
-	"more_effects_like_shadows_and_glow_of_widgets": {
-		"message": "Vairāk efekti, piemēram, ēnas un sīkrīku mirdzums",
-		"description": "data/index.html"
-	},
 	"move_to_bottom": {
 		"message": "Pāriet uz apakšu",
 		"description": "data/index.html"
@@ -509,6 +585,18 @@
 	},
 	"move_to_top": {
 		"message": "Pāriet uz augšu",
+		"description": "data/index.html"
+	},
+	"mute_by_containing_words": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"mute_by_source": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"mute_by_user_name": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"mute_filter": {
@@ -551,8 +639,16 @@
 		"message": "Nav paplašinājumu",
 		"description": "data/index.html"
 	},
+	"not_avaiable_yet": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"notify": {
 		"message": "Paziņojums",
+		"description": "data/index.html"
+	},
+	"notify_me_if_incoming_tweets_mention_hotot": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"oauth_base": {
@@ -651,10 +747,6 @@
 		"message": "Skaistā sieva",
 		"description": "data/index.html"
 	},
-	"preview": {
-		"message": "Priekšskatījums",
-		"description": "data/index.html"
-	},
 	"preview_embedded_media": {
 		"message": "Priekšskatīt iegultos elementus",
 		"description": "data/index.html"
@@ -663,12 +755,56 @@
 		"message": "Priekšskatīt šeit",
 		"description": "data/index.html"
 	},
+	"previous": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"profile": {
 		"message": "Profils",
 		"description": "data/index.html"
 	},
+	"profile_name": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"project_host": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"project_site": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"proxy_auth": {
 		"message": "Autentifikācija",
+		"description": "data/index.html"
+	},
+	"proxy_host": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_http_proxy": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_no_proxy": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_port": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_socks_proxy": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy_system_proxy": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"quick_references": {
@@ -681,6 +817,14 @@
 	},
 	"quote": {
 		"message": "Citēt",
+		"description": "data/index.html"
+	},
+	"read_later": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"read_later_service": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"relation": {
@@ -787,6 +931,10 @@
 		"message": "Šizofrēnija",
 		"description": "data/index.html"
 	},
+	"screen_name1_screen_name2": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"search": {
 		"message": "Meklēt",
 		"description": "data/js/ui.slider.js"
@@ -813,6 +961,14 @@
 	},
 	"select_a_language": {
 		"message": "Izvēlieties valodu",
+		"description": "data/index.html"
+	},
+	"select_a_read_later_service": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"select_a_theme": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"select_actions": {
@@ -867,10 +1023,6 @@
 		"message": "Radās dažas kļūdas",
 		"description": "data/index.html"
 	},
-	"sound": {
-		"message": "Skaņa",
-		"description": "data/index.html"
-	},
 	"starts_minimized": {
 		"message": "Sākt minimizētu",
 		"description": "data/index.html"
@@ -901,6 +1053,10 @@
 	},
 	"summon_hotot": {
 		"message": "Izsaukt Hotot (piemēram: <ALT>C)",
+		"description": "data/index.html"
+	},
+	"supervised_by": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"themes": {
@@ -935,14 +1091,6 @@
 		"message": "Caurspīdīgs",
 		"description": "data/index.html"
 	},
-	"trending_topics": {
-		"message": "Populārākās tēmas",
-		"description": "data/js/ui.slider.js"
-	},
-	"trending_topics_view": {
-		"message": "Populārāko tēmu skats",
-		"description": "data/index.html"
-	},
 	"tweet_cnt": {
 		"message": "Tvīts",
 		"description": "data/js/ui.template.js"
@@ -953,6 +1101,18 @@
 	},
 	"tweets": {
 		"message": "Tvīti",
+		"description": "data/index.html"
+	},
+	"twitter_official_service": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"type_a_name_here": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"type_or_drag_a_photo_here": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"un_favorite_this_tweet_dots": {
@@ -1019,12 +1179,12 @@
 		"message": "Izmantot CITĒT kā noklušeto retvītošanas darbību",
 		"description": "data/index.html"
 	},
-	"use_reply_all_as_default_reply_action": {
-		"message": "Izmantot ATBILDĒT VISIEM kā noklusēto atbildēšanas darbību",
+	"use_read_later_service": {
+		"message": "",
 		"description": "data/index.html"
 	},
-	"use_ubuntu_indicator": {
-		"message": "Izmantot Ubuntu indikatoru",
+	"use_reply_all_as_default_reply_action": {
+		"message": "Izmantot ATBILDĒT VISIEM kā noklusēto atbildēšanas darbību",
 		"description": "data/index.html"
 	},
 	"username": {
@@ -1046,10 +1206,6 @@
 	"view_more_conversation": {
 		"message": "Skatīt plašāku saraksti",
 		"description": "data/js/ui.template.js"
-	},
-	"view_original": {
-		"message": "",
-		"description": "data/index.html"
 	},
 	"virushou_s_integrity": {
 		"message": "Virušu integritāte",
@@ -1075,6 +1231,18 @@
 		"message": "Balss",
 		"description": "data/js/ui.welcome.js"
 	},
+	"word1_word2": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"write_down_description_here": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"written_by": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"you_are_followed_by_them": {
 		"message": "You are followed by them.",
 		"description": "data/js/ui.peopleview.js"
@@ -1090,5 +1258,17 @@
 	"you_are_not_following_each_other": {
 		"message": "Jūs nesekojat viens otram.",
 		"description": "data/js/ui.peopleview.js"
+	},
+	"you_dont_have_a_view": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"you_should_surely_add_one_or_more_views_by_clicking_the_add_button_above": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"your_profile": {
+		"message": "",
+		"description": "data/index.html"
 	}
 }

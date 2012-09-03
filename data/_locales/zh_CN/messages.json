@@ -1,4 +1,8 @@
 {
+	"a_new_hope": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"about": {
 		"message": "关于",
 		"description": ""
@@ -31,6 +35,10 @@
 		"message": "高级",
 		"description": ""
 	},
+	"animation": {
+		"message": "动画",
+		"description": "data/index.html"
+	},
 	"api_base": {
 		"message": "API Base",
 		"description": ""
@@ -43,28 +51,28 @@
 		"message": "归档",
 		"description": "data/index.html"
 	},
+	"artwork_by": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"assassin_s_tango": {
 		"message": "壳酱的诡计",
 		"description": "data/index.html"
 	},
 	"authentication_ok": {
-		"message": "验证通过呦！",
+		"message": "验证通过嗷！",
 		"description": "data/js/ui.welcome.js"
 	},
 	"author": {
 		"message": "作者",
 		"description": "data/js/ui.exts_dlg.js"
 	},
-	"auto_update": {
-		"message": "自动更新",
+	"auto_longer_tweet": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"automatically_sign_in_after_opening": {
 		"message": "打开以后自动登陆",
-		"description": "data/index.html"
-	},
-	"balance_between_attractiveness_and_preformance": {
-		"message": "在性能和养眼度之间保持平衡。",
 		"description": "data/index.html"
 	},
 	"behavior": {
@@ -91,6 +99,10 @@
 		"message": "不能验证殿下的身份噢。请检查您的用户名/密码和 API 地址。",
 		"description": "data/js/ui.welcome.js"
 	},
+	"change_your_profile_picture_by_clicking_it": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"charactor_at_is_not_allow_in_profile_prefix": {
 		"message": "不允许在账户前缀中使用`@`字符哦喵",
 		"description": "data/js/ui.welcome.js"
@@ -99,8 +111,8 @@
 		"message": "集成到Chrome右键菜单",
 		"description": "data/index.html"
 	},
-	"clean_token": {
-		"message": "清空令牌",
+	"classic": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"clear": {
@@ -109,6 +121,10 @@
 	},
 	"clear_and_close": {
 		"message": "清空并且关闭",
+		"description": "data/index.html"
+	},
+	"clear_token": {
+		"message": "清空令牌",
 		"description": "data/index.html"
 	},
 	"click_me_to_continue": {
@@ -123,6 +139,10 @@
 		"message": "点击切换DM模式",
 		"description": "data/index.html"
 	},
+	"click_to_expand_menu": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"click_to_show": {
 		"message": "点击查看",
 		"description": "data/js/ui.template.js"
@@ -130,6 +150,10 @@
 	"click_to_show_retweeters": {
 		"message": "点我查看转发人呦",
 		"description": "data/js/ui.template.js"
+	},
+	"client_name1_client_name2": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"close": {
 		"message": "关闭",
@@ -143,6 +167,10 @@
 		"message": "发推",
 		"description": "data/index.html"
 	},
+	"compress_tweet": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"copy_the_pin_code_and_paste_it_into_the_box_below": {
 		"message": "复制 PIN Code 并且将它粘贴到下面的文本框",
 		"description": ""
@@ -154,6 +182,10 @@
 	"create_a_list": {
 		"message": "创建一个新列表",
 		"description": "data/js/ui.template.js"
+	},
+	"create_a_new_profile": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"credits": {
 		"message": "致谢",
@@ -183,12 +215,16 @@
 		"message": "删除成功呦！",
 		"description": "data/js/ui.main.js"
 	},
-	"disable_decoration_of_widgets_and_some_animations": {
-		"message": "禁用控件集装饰和部分动画。",
-		"description": "data/index.html"
-	},
 	"donate": {
 		"message": "捐赠",
+		"description": "data/index.html"
+	},
+	"donate_hint1": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"donate_hint2": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"dots": {
@@ -207,33 +243,45 @@
 		"message": "丢弃",
 		"description": "data/index.html"
 	},
+	"drop_tweets_contain_hash_tag_nowplaying": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_contain_word_abc": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_retweeted_by_abc": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_sent_by_abc": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"drop_tweets_sent_from_foursquare": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"edit": {
 		"message": "编辑",
 		"description": "data/js/ui.template.js"
 	},
-	"effects": {
-		"message": "效果",
-		"description": "data/index.html"
-	},
-	"effects_extra": {
-		"message": "高",
-		"description": "data/index.html"
-	},
-	"effects_low": {
-		"message": "低",
-		"description": "data/index.html"
-	},
-	"effects_normal": {
-		"message": "中",
+	"eg_alt_h": {
+		"message": "例如<Alt>H",
 		"description": "data/index.html"
 	},
 	"enable": {
 		"message": "启用",
 		"description": "data/js/ui.exts_dlg.js"
 	},
-	"enable_proxy": {
-		"message": "启用代理",
-		"description": ""
+	"enable_animation": {
+		"message": "启用动画",
+		"description": "data/index.html"
+	},
+	"enable_gpu_acceleration": {
+		"message": "启用GPU加速",
+		"description": "data/index.html"
 	},
 	"enable_verbose_mode": {
 		"message": "启用啰嗦模式",
@@ -271,6 +319,10 @@
 		"message": "我的收藏",
 		"description": "data/index.html"
 	},
+	"fellowship": {
+		"message": "外交",
+		"description": "data/js/ui.template.js"
+	},
 	"filter_tweets_like_it": {
 		"message": "过滤类似的推",
 		"description": "data/index.html"
@@ -296,11 +348,11 @@
 		"description": "data/js/ui.main.js"
 	},
 	"follower_cnt": {
-		"message": "关注者",
+		"message": "仰慕者",
 		"description": "data/js/ui.template.js"
 	},
 	"followers": {
-		"message": "关注者",
+		"message": "仰慕者",
 		"description": "data/js/ui.template.js"
 	},
 	"font": {
@@ -316,11 +368,11 @@
 		"description": ""
 	},
 	"friend_cnt": {
-		"message": "朋友",
+		"message": "基友",
 		"description": "data/js/ui.template.js"
 	},
 	"friends": {
-		"message": "朋友",
+		"message": "基友",
 		"description": "data/js/ui.template.js"
 	},
 	"global": {
@@ -338,6 +390,10 @@
 	"help": {
 		"message": "帮助",
 		"description": ""
+	},
+	"hey": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"hey_it_is_you": {
 		"message": "殿下侬好！殿下再崴！",
@@ -362,6 +418,10 @@
 	"hotot": {
 		"message": "傲兔",
 		"description": ""
+	},
+	"hotot_description": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"image_uploader": {
 		"message": "图片上传器",
@@ -427,6 +487,22 @@
 		"message": "许可",
 		"description": ""
 	},
+	"license_text1": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"license_text2": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"license_text3": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"line_height": {
+		"message": "行高",
+		"description": "data/index.html"
+	},
 	"list": {
 		"message": "列表",
 		"description": "data/index.html"
@@ -467,6 +543,10 @@
 		"message": "屏蔽",
 		"description": "data/index.html"
 	},
+	"mask_tweets_contain_hash_tag_callmemaybe": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"mention_them": {
 		"message": "提及",
 		"description": "data/js/ui.template.js"
@@ -491,10 +571,6 @@
 		"message": "更多动作",
 		"description": "data/js/ui.template.js"
 	},
-	"more_effects_like_shadows_and_glow_of_widgets": {
-		"message": "开启更多特效，比如阴影和发光。",
-		"description": "data/index.html"
-	},
 	"move_to_bottom": {
 		"message": "移到底部",
 		"description": "data/index.html"
@@ -509,6 +585,18 @@
 	},
 	"move_to_top": {
 		"message": "移到顶部",
+		"description": "data/index.html"
+	},
+	"mute_by_containing_words": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"mute_by_source": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"mute_by_user_name": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"mute_filter": {
@@ -551,9 +639,17 @@
 		"message": "木有扩展",
 		"description": "data/index.html"
 	},
+	"not_avaiable_yet": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"notify": {
 		"message": "通知",
 		"description": ""
+	},
+	"notify_me_if_incoming_tweets_mention_hotot": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"oauth_base": {
 		"message": "OAuth Base",
@@ -651,10 +747,6 @@
 		"message": "俏人妻西乔",
 		"description": "data/index.html"
 	},
-	"preview": {
-		"message": "预览",
-		"description": "data/index.html"
-	},
 	"preview_embedded_media": {
 		"message": "预览嵌入的多媒体",
 		"description": "data/index.html"
@@ -663,12 +755,56 @@
 		"message": "预览",
 		"description": "data/index.html"
 	},
+	"previous": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"profile": {
 		"message": "账户",
 		"description": "data/index.html"
 	},
+	"profile_name": {
+		"message": "帐户名",
+		"description": "data/index.html"
+	},
+	"project_host": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"project_site": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"proxy": {
+		"message": "代理",
+		"description": "data/index.html"
+	},
 	"proxy_auth": {
 		"message": "代理认证",
+		"description": "data/index.html"
+	},
+	"proxy_host": {
+		"message": "代理主机",
+		"description": "data/index.html"
+	},
+	"proxy_http_proxy": {
+		"message": "HTTP代理",
+		"description": "data/index.html"
+	},
+	"proxy_no_proxy": {
+		"message": "无代理",
+		"description": "data/index.html"
+	},
+	"proxy_port": {
+		"message": "代理端口",
+		"description": "data/index.html"
+	},
+	"proxy_socks_proxy": {
+		"message": "SOCKS代理",
+		"description": "data/index.html"
+	},
+	"proxy_system_proxy": {
+		"message": "系统代理",
 		"description": "data/index.html"
 	},
 	"quick_references": {
@@ -682,6 +818,14 @@
 	"quote": {
 		"message": "引用",
 		"description": ""
+	},
+	"read_later": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"read_later_service": {
+		"message": "",
+		"description": "data/index.html"
 	},
 	"relation": {
 		"message": "关系",
@@ -787,12 +931,16 @@
 		"message": "裂裂的芬芳",
 		"description": "data/index.html"
 	},
+	"screen_name1_screen_name2": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"search": {
 		"message": "搜索",
 		"description": "data/js/ui.slider.js"
 	},
 	"search_api_base2": {
-		"message": "Search API Base",
+		"message": "搜索 API Base",
 		"description": ""
 	},
 	"search_in_google": {
@@ -813,6 +961,14 @@
 	},
 	"select_a_language": {
 		"message": "选择语言",
+		"description": "data/index.html"
+	},
+	"select_a_read_later_service": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"select_a_theme": {
+		"message": "",
 		"description": "data/index.html"
 	},
 	"select_actions": {
@@ -848,11 +1004,11 @@
 		"description": "data/index.html"
 	},
 	"signing_api_base": {
-		"message": "Signing API Base",
+		"message": "登录 API Base",
 		"description": "data/index.html"
 	},
 	"signing_oauth_base": {
-		"message": "Signing OAuth Base",
+		"message": "登录 OAuth Base",
 		"description": "data/index.html"
 	},
 	"slide_to_next_page": {
@@ -866,10 +1022,6 @@
 	"some_error_occur": {
 		"message": "矮油～ 发生了点错误耶 >_<",
 		"description": "data/index.html"
-	},
-	"sound": {
-		"message": "提示音",
-		"description": ""
 	},
 	"starts_minimized": {
 		"message": "启动即最小化",
@@ -903,6 +1055,10 @@
 		"message": "召唤Hotot 『比如: <ALT>C』",
 		"description": ""
 	},
+	"supervised_by": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"themes": {
 		"message": "主题",
 		"description": "data/index.html"
@@ -916,7 +1072,7 @@
 		"description": "data/index.html"
 	},
 	"to": {
-		"message": "To",
+		"message": "给",
 		"description": "data/index.html"
 	},
 	"to_cold_beauty": {
@@ -935,14 +1091,6 @@
 		"message": "透明",
 		"description": "data/index.html"
 	},
-	"trending_topics": {
-		"message": "趋势",
-		"description": "data/js/ui.slider.js"
-	},
-	"trending_topics_view": {
-		"message": "趋势",
-		"description": "data/index.html"
-	},
 	"tweet_cnt": {
 		"message": "状态",
 		"description": "data/js/ui.template.js"
@@ -954,6 +1102,18 @@
 	"tweets": {
 		"message": "状态",
 		"description": ""
+	},
+	"twitter_official_service": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"type_a_name_here": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"type_or_drag_a_photo_here": {
+		"message": "写点什么或者拖拽照片到此",
+		"description": "data/index.html"
 	},
 	"un_favorite_this_tweet_dots": {
 		"message": "取消收藏呢...",
@@ -996,7 +1156,7 @@
 		"description": "data/index.html"
 	},
 	"upload_api_base": {
-		"message": "Upload API Base",
+		"message": "上传 API Base",
 		"description": "data/index.html"
 	},
 	"upload_photo": {
@@ -1019,13 +1179,13 @@
 		"message": "使用『引用』作为默认转发方式",
 		"description": "data/index.html"
 	},
+	"use_read_later_service": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"use_reply_all_as_default_reply_action": {
 		"message": "使用『回复所有』作为默认回复方式",
 		"description": "data/index.html"
-	},
-	"use_ubuntu_indicator": {
-		"message": "使用乌斑兔 Indicator",
-		"description": ""
 	},
 	"username": {
 		"message": "用户名",
@@ -1046,10 +1206,6 @@
 	"view_more_conversation": {
 		"message": "查看会话",
 		"description": "data/js/ui.template.js"
-	},
-	"view_original": {
-		"message": "查看原图",
-		"description": "data/index.html"
 	},
 	"virushou_s_integrity": {
 		"message": "火炬的正直",
@@ -1075,6 +1231,18 @@
 		"message": "低语",
 		"description": "data/js/ui.welcome.js"
 	},
+	"word1_word2": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"write_down_description_here": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"written_by": {
+		"message": "",
+		"description": "data/index.html"
+	},
 	"you_are_followed_by_them": {
 		"message": "他／她／它默默地关注着你…",
 		"description": "data/js/ui.peopleview.js"
@@ -1090,5 +1258,17 @@
 	"you_are_not_following_each_other": {
 		"message": "你们宛如路人，擦身而过，不相往来。",
 		"description": "data/js/ui.peopleview.js"
+	},
+	"you_dont_have_a_view": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"you_should_surely_add_one_or_more_views_by_clicking_the_add_button_above": {
+		"message": "",
+		"description": "data/index.html"
+	},
+	"your_profile": {
+		"message": "",
+		"description": "data/index.html"
 	}
 }

@@ -4,51 +4,51 @@
 		"description": "data/index.html"
 	},
 	"about": {
-		"message": "О программі",
+		"message": "Over",
 		"description": "data/index.html"
 	},
 	"about_and_help": {
-		"message": "Допомога",
+		"message": "Info & Help",
 		"description": "data/index.html"
 	},
 	"access_token_doesnt_exist": {
-		"message": "Доступ о логіну ще не створено",
+		"message": "Toegangstoken bestaat niet",
 		"description": "data/index.html"
 	},
 	"action": {
-		"message": "Дія",
+		"message": "Actie",
 		"description": "data/index.html"
 	},
 	"add": {
-		"message": "Додати",
+		"message": "Toevoegen",
 		"description": "data/index.html"
 	},
 	"add_new_views": {
-		"message": "Add new views",
+		"message": "Nieuwe weergave toevoegen",
 		"description": "data/index.html"
 	},
 	"add_to_list": {
-		"message": "Додати до списку",
+		"message": "Voeg toe aan lijst",
 		"description": "data/js/ui.template.js"
 	},
 	"advanced": {
-		"message": "Advanced",
+		"message": "Geavanceerd",
 		"description": "data/index.html"
 	},
 	"animation": {
-		"message": "",
+		"message": "Animatie",
 		"description": "data/index.html"
 	},
 	"api_base": {
-		"message": "База API",
+		"message": "API-basis",
 		"description": "data/index.html"
 	},
 	"api_setting": {
-		"message": "Налаштування API",
+		"message": "API-instellingen",
 		"description": "data/index.html"
 	},
 	"archive": {
-		"message": "Archive",
+		"message": "Archief",
 		"description": "data/index.html"
 	},
 	"artwork_by": {
@@ -60,11 +60,11 @@
 		"description": "data/index.html"
 	},
 	"authentication_ok": {
-		"message": "Authentication OK!",
+		"message": "Inloggen gelukt!",
 		"description": "data/js/ui.welcome.js"
 	},
 	"author": {
-		"message": "Автор",
+		"message": "Auteur",
 		"description": "data/js/ui.exts_dlg.js"
 	},
 	"auto_longer_tweet": {
@@ -72,11 +72,11 @@
 		"description": "data/index.html"
 	},
 	"automatically_sign_in_after_opening": {
-		"message": "Automatically sign in after opening",
+		"message": "Automatisch inloggen na starten",
 		"description": "data/index.html"
 	},
 	"behavior": {
-		"message": "Behavior",
+		"message": "Gedrag",
 		"description": "data/index.html"
 	},
 	"bio": {
@@ -84,7 +84,7 @@
 		"description": "data/index.html"
 	},
 	"block": {
-		"message": "Block",
+		"message": "Blokkeer",
 		"description": "data/js/ui.template.js"
 	},
 	"bloody_marguerite": {
@@ -92,11 +92,11 @@
 		"description": "data/index.html"
 	},
 	"cancel": {
-		"message": "Cancel",
+		"message": "Annuleren",
 		"description": "data/index.html"
 	},
 	"cannot_authenticate_you_please_check_your_username_or_password_and_api_base": {
-		"message": "Cannot authenticate you! Please check your username/password and API Base",
+		"message": "Het inloggen lukt niet! Controleer je gebruikersnaam, wachtwoord en API-instellingen",
 		"description": "data/js/ui.welcome.js"
 	},
 	"change_your_profile_picture_by_clicking_it": {
@@ -104,11 +104,11 @@
 		"description": "data/index.html"
 	},
 	"charactor_at_is_not_allow_in_profile_prefix": {
-		"message": "Character `@` is not allowed in profile prefix",
+		"message": "Het @-teken is niet toegestaan als profiel-voorvoegsel",
 		"description": "data/js/ui.welcome.js"
 	},
 	"chrome_context_menu_integration": {
-		"message": "",
+		"message": "Chrome contextmenu intregratie",
 		"description": "data/index.html"
 	},
 	"classic": {
@@ -116,27 +116,27 @@
 		"description": "data/index.html"
 	},
 	"clear": {
-		"message": "Clear",
+		"message": "Wissen",
 		"description": "data/index.html"
 	},
 	"clear_and_close": {
-		"message": "Clear & Close",
+		"message": "Wissen & sluiten",
 		"description": "data/index.html"
 	},
 	"clear_token": {
-		"message": "Clean token",
+		"message": "Clear token",
 		"description": "data/index.html"
 	},
 	"click_me_to_continue": {
-		"message": "Click Me to Continue",
+		"message": "Klik hier om verder te gaan",
 		"description": "data/index.html"
 	},
 	"click_the_button_below": {
-		"message": "Click the button below",
+		"message": "Klik op de knop hieronder",
 		"description": "data/index.html"
 	},
 	"click_to_compose_message": {
-		"message": "Click to compose message",
+		"message": "Klik om een bericht op te stellen",
 		"description": "data/index.html"
 	},
 	"click_to_expand_menu": {
@@ -144,11 +144,11 @@
 		"description": "data/index.html"
 	},
 	"click_to_show": {
-		"message": "Click to show",
+		"message": "Klik om te bekijken",
 		"description": "data/js/ui.template.js"
 	},
 	"click_to_show_retweeters": {
-		"message": "Click to show retweeters",
+		"message": "Klik om retweets te zien",
 		"description": "data/js/ui.template.js"
 	},
 	"client_name1_client_name2": {
@@ -156,15 +156,15 @@
 		"description": "data/index.html"
 	},
 	"close": {
-		"message": "Close",
+		"message": "Sluiten",
 		"description": "data/index.html"
 	},
 	"close_current_column": {
-		"message": "Close current column",
+		"message": "Sluit huidige kolom",
 		"description": "data/index.html"
 	},
 	"compose": {
-		"message": "Compose",
+		"message": "Opstellen",
 		"description": "data/index.html"
 	},
 	"compress_tweet": {
@@ -172,15 +172,15 @@
 		"description": "data/index.html"
 	},
 	"copy_the_pin_code_and_paste_it_into_the_box_below": {
-		"message": "Copy the PIN Code and paste it into the box below",
+		"message": "Kopieer de PIN-code en plak deze in het veld hieronder",
 		"description": "data/index.html"
 	},
 	"copy_to_clipboard": {
-		"message": "Copy into clipboard",
+		"message": "Kopieer naar klembord",
 		"description": "date/index.html"
 	},
 	"create_a_list": {
-		"message": "Create A List",
+		"message": "Maak een lijst",
 		"description": "data/js/ui.template.js"
 	},
 	"create_a_new_profile": {
@@ -196,27 +196,27 @@
 		"description": "data/index.html"
 	},
 	"custom_font": {
-		"message": "",
+		"message": "Aangepast lettertype",
 		"description": "data/index.html"
 	},
 	"default_picture_service": {
-		"message": "Default Picture Service",
+		"message": "Standaard fotodienst",
 		"description": "data/index.html"
 	},
 	"delete": {
-		"message": "Delete",
+		"message": "Verwijder",
 		"description": "data/index.html"
 	},
 	"delete_this_tweet": {
-		"message": "Delete this tweet",
+		"message": "Verwijder deze tweet",
 		"description": "data/js/ui.template.js"
 	},
 	"destroy_successfully": {
-		"message": "Destroyed Successfully!",
+		"message": "Succesvol vernietigd!",
 		"description": "data/js/ui.main.js"
 	},
 	"donate": {
-		"message": "",
+		"message": "Doneer",
 		"description": "data/index.html"
 	},
 	"donate_hint1": {
@@ -232,15 +232,15 @@
 		"description": "data/js/ui.main.js"
 	},
 	"drafts": {
-		"message": "Drafts",
+		"message": "Concepten",
 		"description": "data/js/ui.status_box.js"
 	},
 	"drag_a_photo_here": {
-		"message": "Drag a photo here",
+		"message": "Sleep hier een foto naar toe",
 		"description": "data/index.html"
 	},
 	"drop": {
-		"message": "Drop",
+		"message": "Neerzetten",
 		"description": "data/index.html"
 	},
 	"drop_tweets_contain_hash_tag_nowplaying": {
@@ -264,23 +264,23 @@
 		"description": "data/index.html"
 	},
 	"edit": {
-		"message": "Edit",
+		"message": "Bewerken",
 		"description": "data/js/ui.template.js"
 	},
 	"eg_alt_h": {
-		"message": "",
+		"message": "bijv. <Alt>-H",
 		"description": "data/index.html"
 	},
 	"enable": {
-		"message": "Enable",
+		"message": "Inschakelen",
 		"description": "data/js/ui.exts_dlg.js"
 	},
 	"enable_animation": {
-		"message": "",
+		"message": "Animaties inschakelen",
 		"description": "data/index.html"
 	},
 	"enable_gpu_acceleration": {
-		"message": "",
+		"message": "GPU-acceleratie inschakelen",
 		"description": "data/index.html"
 	},
 	"enable_verbose_mode": {
@@ -288,27 +288,27 @@
 		"description": "data/index.html"
 	},
 	"errors": {
-		"message": "Errors",
+		"message": "Fouten",
 		"description": "data/index.html"
 	},
 	"examples": {
-		"message": "Examples",
+		"message": "Voorbeelden",
 		"description": "data/index.html"
 	},
 	"exit_hotot_when_close_window": {
-		"message": "Exit Hotot when close window",
+		"message": "Hotot afsluiten wanneer venster wordt gesloten",
 		"description": "data/index.html"
 	},
 	"extensions": {
-		"message": "Extensions",
+		"message": "Uitbreidingen",
 		"description": "data/index.html"
 	},
 	"fav_or_un_fav": {
-		"message": "Fav/Un-fav",
+		"message": "Favorited/Unfavorited",
 		"description": "data/index.html"
 	},
 	"favorite_this_tweet_dots": {
-		"message": "Favorite this tweet ...",
+		"message": "Voeg tweet toe aan favorieten...",
 		"description": "data/js/ui.main.js"
 	},
 	"favs": {
@@ -316,19 +316,19 @@
 		"description": "data/js/ui.template.js"
 	},
 	"favs_view": {
-		"message": "Favorites View",
+		"message": "Favorietenweergave",
 		"description": "data/index.html"
 	},
 	"fellowship": {
-		"message": "",
+		"message": "Fellowship",
 		"description": "data/js/ui.template.js"
 	},
 	"filter_tweets_like_it": {
-		"message": "Filter Tweets Like It",
+		"message": "Filter tweets als deze",
 		"description": "data/index.html"
 	},
 	"find": {
-		"message": "Find",
+		"message": "Zoek",
 		"description": "data/index.html"
 	},
 	"fine": {
@@ -340,51 +340,51 @@
 		"description": "data/index.html"
 	},
 	"follow": {
-		"message": "Follow",
+		"message": "Volgen",
 		"description": "data/js/ui.template.js"
 	},
 	"follow_at": {
-		"message": "Follow @",
+		"message": "Volg @",
 		"description": "data/js/ui.main.js"
 	},
 	"follower_cnt": {
-		"message": "Follower",
+		"message": "Volger",
 		"description": "data/js/ui.template.js"
 	},
 	"followers": {
-		"message": "Followers",
+		"message": "Volgers",
 		"description": "data/js/ui.template.js"
 	},
 	"font": {
-		"message": "Font",
+		"message": "Lettertype",
 		"description": "data/index.html"
 	},
 	"font_preview_hint": {
-		"message": "The quick brown fox jumps over the lazy dog.",
+		"message": "Pa's wijze lynx bezag vroom het fikse aquaduct.",
 		"description": "data/index.html"
 	},
 	"font_size": {
-		"message": "Font Size",
+		"message": "Lettergrootte",
 		"description": "data/index.html"
 	},
 	"friend_cnt": {
-		"message": "Friend",
+		"message": "Vriend",
 		"description": "data/js/ui.template.js"
 	},
 	"friends": {
-		"message": "Friends",
+		"message": "Vrienden",
 		"description": "data/js/ui.template.js"
 	},
 	"global": {
-		"message": "Global",
+		"message": "Globaal",
 		"description": "data/index.html"
 	},
 	"globals_restart_hint": {
-		"message": "You MUST restart Hotot for some changes below to take effect. And these changes will affect ALL accounts",
+		"message": "Je MOET Hotot herstarten om een aantal instellingen hieronder van toepassing te laten zijn. En deze aanpassingen betreffen ALLE accounts",
 		"description": "data/index.html"
 	},
 	"greeting": {
-		"message": "Greetings!",
+		"message": "Groetjes!",
 		"description": "data/index.html"
 	},
 	"help": {
@@ -396,23 +396,23 @@
 		"description": "data/index.html"
 	},
 	"hey_it_is_you": {
-		"message": "Hey, it's You!",
+		"message": "Hee, jij bent het!",
 		"description": "data/js/ui.peopleview.js"
 	},
 	"hidden_dark_minds": {
-		"message": "Hidden dark minds",
+		"message": "Verborgen donkere geesten",
 		"description": "data/index.html"
 	},
 	"home_timeline": {
-		"message": "Home Timeline",
+		"message": "Starttimeline",
 		"description": "data/js/ui.slider.js"
 	},
 	"home_view": {
-		"message": "Home View",
+		"message": "Startweergave",
 		"description": "data/index.html"
 	},
 	"host": {
-		"message": "",
+		"message": "Gast",
 		"description": "data/index.html"
 	},
 	"hotot": {
@@ -424,7 +424,7 @@
 		"description": "data/index.html"
 	},
 	"image_uploader": {
-		"message": "Image uploader",
+		"message": "Afbeeldingsuploader",
 		"description": "data/index.html"
 	},
 	"info": {
@@ -432,31 +432,31 @@
 		"description": "data/js/ui.template.js"
 	},
 	"insert_smiley": {
-		"message": "Insert smiley",
+		"message": "Smiley invoegen",
 		"description": "data/index.html"
 	},
 	"intelligent_filter": {
-		"message": "Intelligent Filter",
+		"message": "Intelligent filter",
 		"description": "data/index.html"
 	},
 	"interface_language": {
-		"message": "Interface language",
+		"message": "Interfacetaal",
 		"description": "data/index.html"
 	},
 	"join": {
-		"message": "Join",
+		"message": "Meedoen",
 		"description": "data/js/ui.template.js"
 	},
 	"just_cannot_stop_thinking_of_here": {
-		"message": "Just can't stop thinking of here",
+		"message": "Ik kan niet stoppen met hierover nadenken",
 		"description": "data/index.html"
 	},
 	"keyboard": {
-		"message": "Keyboard",
+		"message": "Toetsenbord",
 		"description": "data/index.html"
 	},
 	"keyboard_shortcuts": {
-		"message": "Keyboard Shortcuts",
+		"message": "Sneltoetsen",
 		"description": "data/index.html"
 	},
 	"kismet_firewall": {
@@ -464,27 +464,27 @@
 		"description": "data/index.html"
 	},
 	"kismet_guide": {
-		"message": "Kismet Guide",
+		"message": "Kismetgids",
 		"description": "data/index.html"
 	},
 	"kismet_mute_hint": {
-		"message": "WARNNING: Tweets that have following attributes will not appear on your timeline.",
+		"message": "WAARSCHUWING: Tweets met de volgende attributen verschijnen niet in je timeline.",
 		"description": "data/index.html"
 	},
 	"label_with_color": {
-		"message": "Label with Color",
+		"message": "Label met kleur",
 		"description": "data/index.html"
 	},
 	"language": {
-		"message": "Language",
+		"message": "Taal",
 		"description": "data/index.html"
 	},
 	"let_hotot_collects_anonymous_statistic_information": {
-		"message": "Let Hotot collects anonymous statistic information",
+		"message": "Laat Hotot anonieme statistieken verzamelen",
 		"description": "data/index.html"
 	},
 	"license": {
-		"message": "License",
+		"message": "Licentie",
 		"description": "data/index.html"
 	},
 	"license_text1": {
@@ -500,47 +500,47 @@
 		"description": "data/index.html"
 	},
 	"line_height": {
-		"message": "",
+		"message": "Regelhoogte",
 		"description": "data/index.html"
 	},
 	"list": {
-		"message": "List",
+		"message": "Lijst",
 		"description": "data/index.html"
 	},
 	"listed_cnt": {
-		"message": "Listed",
+		"message": "In lijst",
 		"description": "data/js/ui.template.js"
 	},
 	"lists": {
-		"message": "Lists",
+		"message": "Lijsten",
 		"description": "data/js/ui.template.js"
 	},
 	"lists_following_them": {
-		"message": "Lists following them",
+		"message": "Lijsten die hen volgen",
 		"description": "data/js/ui.template.js"
 	},
 	"lists_of_them": {
-		"message": "Lists of them",
+		"message": "Lijsten van hen",
 		"description": "data/js/ui.template.js"
 	},
 	"loading_dots": {
-		"message": "Loading ... ",
+		"message": "Laden... ",
 		"description": "data/js/ui.template.js"
 	},
 	"loading_resources_hint": {
-		"message": "Loading Resources ...",
+		"message": "Bronnen worden geladen...",
 		"description": "data/index.html"
 	},
 	"location": {
-		"message": "Location",
+		"message": "Locatie",
 		"description": "data/index.html"
 	},
 	"mark_deleted_tweets": {
-		"message": "Mark deleted tweets",
+		"message": "Markeer verwijderde tweets",
 		"description": "data/index.html"
 	},
 	"mask": {
-		"message": "Mask",
+		"message": "Maskeer",
 		"description": "data/index.html"
 	},
 	"mask_tweets_contain_hash_tag_callmemaybe": {
@@ -556,35 +556,35 @@
 		"description": "data/js/ui.slider.js"
 	},
 	"mentions_view": {
-		"message": "Mentions View",
+		"message": "Mentions-weergave",
 		"description": "data/index.html"
 	},
 	"messages": {
-		"message": "Messages",
+		"message": "Berichten",
 		"description": "data/js/ui.slider.js"
 	},
 	"messages_view": {
-		"message": "Messages View",
+		"message": "Berichtenweergave",
 		"description": "data/index.html"
 	},
 	"more_actions": {
-		"message": "More",
+		"message": "Meer",
 		"description": "data/js/ui.template.js"
 	},
 	"move_to_bottom": {
-		"message": "Move to bottom",
+		"message": "Verplaats naar beneden",
 		"description": "data/index.html"
 	},
 	"move_to_next_tweet": {
-		"message": "Move to next tweet",
+		"message": "Verplaats naar volgende tweet",
 		"description": "data/index.html"
 	},
 	"move_to_prev_tweet": {
-		"message": "Move to prev tweet",
+		"message": "Verplaats naar vorige tweet",
 		"description": "data/index.html"
 	},
 	"move_to_top": {
-		"message": "Move to top",
+		"message": "Verplaats naar boven",
 		"description": "data/index.html"
 	},
 	"mute_by_containing_words": {
@@ -600,15 +600,15 @@
 		"description": "data/index.html"
 	},
 	"mute_filter": {
-		"message": "Mute Filter",
+		"message": "Dempfilter",
 		"description": "data/index.html"
 	},
 	"my_favs": {
-		"message": "My Favorites",
+		"message": "Mijn favorieten",
 		"description": "data/js/ui.slider.js"
 	},
 	"my_journey_is_to_the_sea_of_stars": {
-		"message": "My Journey is to the sea of stars",
+		"message": "My journey is to the sea of stars",
 		"description": "data/index.html"
 	},
 	"my_power": {
@@ -616,7 +616,7 @@
 		"description": "data/js/lib.twitterapi.js"
 	},
 	"name": {
-		"message": "Name",
+		"message": "Naam",
 		"description": "data/index.html"
 	},
 	"nearly_dead": {
@@ -624,19 +624,19 @@
 		"description": "data/js/lib.twitterapi.js"
 	},
 	"network_error_please_try_later": {
-		"message": "Network Error! Please try later.",
+		"message": "Netwerkfout! Probeer het later nog eens.",
 		"description": "data/js/ui.welcome.js"
 	},
 	"new_profile_has_been_created": {
-		"message": "New Profile has been created!",
+		"message": "New profile has been created!",
 		"description": "data/js/ui.welcome.js"
 	},
 	"next": {
-		"message": "Next",
+		"message": "Volgende",
 		"description": "data/index.html"
 	},
 	"no_extension": {
-		"message": "No Extension",
+		"message": "Geen extensie",
 		"description": "data/index.html"
 	},
 	"not_avaiable_yet": {
@@ -644,7 +644,7 @@
 		"description": "data/index.html"
 	},
 	"notify": {
-		"message": "Notify",
+		"message": "Melden",
 		"description": "data/index.html"
 	},
 	"notify_me_if_incoming_tweets_mention_hotot": {
@@ -652,11 +652,11 @@
 		"description": "data/index.html"
 	},
 	"oauth_base": {
-		"message": "OAuth Base",
+		"message": "OAuth-basis",
 		"description": "data/index.html"
 	},
 	"official_retweet_this_tweet": {
-		"message": "Official retweet this tweet",
+		"message": "Retweet deze tweet officieel",
 		"description": "data/js/ui.template.js"
 	},
 	"ok": {
@@ -664,35 +664,35 @@
 		"description": "data/index.html"
 	},
 	"oops_a_network_error_occurs": {
-		"message": "Oops, A Network Error Occurs",
+		"message": "Oeps, er trad een netwerkfout op!",
 		"description": "data/js/ui.welcome.js"
 	},
 	"oops_an_api_error_occurs": {
-		"message": "Oops, An API Error Occurs!",
+		"message": "Oeps, er trad een API-fout op!",
 		"description": "data/js/ui.welcome.js"
 	},
 	"open_a_list_dots": {
-		"message": "Open a List ...",
+		"message": "Open een lijst...",
 		"description": "data/index.html"
 	},
 	"open_a_profile_dots": {
-		"message": "Open a Profile ...",
+		"message": "Open een profiel...",
 		"description": "data/index.html"
 	},
 	"open_first_link": {
-		"message": "Open first link",
+		"message": "Open eerste link",
 		"description": "data/index.html"
 	},
 	"open_speaker_link": {
-		"message": "Open speaker link",
+		"message": "Open speakerlink",
 		"description": "data/index.html"
 	},
 	"options": {
-		"message": "Options",
+		"message": "Opties",
 		"description": "data/js/ui.exts_dlg.js"
 	},
 	"or_copy_the_address_and_open_it_in_your_browser": {
-		"message": "Or copy the address and open it in your browser.",
+		"message": "Of kopieer het adres en open het in je browser.",
 		"description": "data/index.html"
 	},
 	"panda_acts_cute": {
@@ -700,47 +700,47 @@
 		"description": "data/index.html"
 	},
 	"password": {
-		"message": "",
+		"message": "Wachtwoord",
 		"description": "data/index.html"
 	},
 	"paste_from_clipboard": {
-		"message": "Paste from clipboard",
+		"message": "Plak van klembord",
 		"description": "date/index.html"
 	},
 	"pin_code": {
-		"message": "PIN Code",
+		"message": "PIN-code",
 		"description": "data/index.html"
 	},
 	"please_enter_the_recipient": {
-		"message": "please enter the recipient!",
+		"message": "Vul de ontvanger in!",
 		"description": "data/js/ui.status_box.js"
 	},
 	"please_entry_a_profile_prefix": {
-		"message": "Please enter a profile prefix",
+		"message": "Voer een profielvoorvoegsel in",
 		"description": "data/js/ui.welcome.js"
 	},
 	"port": {
-		"message": "",
+		"message": "Poort",
 		"description": "data/index.html"
 	},
 	"post_successfully": {
-		"message": "Posted Successfully!",
+		"message": "Succesvol geplaatst!",
 		"description": "data/js/ui.status_box.js"
 	},
 	"posting_dots": {
-		"message": "Posting ...",
+		"message": "Plaatsen...",
 		"description": "data/js/ui.status_box.js"
 	},
 	"powerfull": {
-		"message": "Powerful",
+		"message": "Krachtig",
 		"description": "data/js/lib.twitterapi.js"
 	},
 	"preferences": {
-		"message": "Preferences",
+		"message": "Voorkeuren",
 		"description": "data/index.html"
 	},
 	"preload_latest_tweets_in_conversations_if_possible": {
-		"message": "Preload latest tweets in conversations if possible.",
+		"message": "Laatste tweets in conversatie alvast laden (indien mogelijk).",
 		"description": "data/index.html"
 	},
 	"pretty_wife": {
@@ -748,11 +748,11 @@
 		"description": "data/index.html"
 	},
 	"preview_embedded_media": {
-		"message": "Preview Embedded Media",
+		"message": "Voorbeeld tonen van ingebedde media",
 		"description": "data/index.html"
 	},
 	"preview_here": {
-		"message": "Preview Here",
+		"message": "Voorbeeld hier",
 		"description": "data/index.html"
 	},
 	"previous": {
@@ -760,11 +760,11 @@
 		"description": "data/index.html"
 	},
 	"profile": {
-		"message": "Profile",
+		"message": "Profiel",
 		"description": "data/index.html"
 	},
 	"profile_name": {
-		"message": "",
+		"message": "Profielnaam",
 		"description": "data/index.html"
 	},
 	"project_host": {
@@ -776,35 +776,35 @@
 		"description": "data/index.html"
 	},
 	"proxy": {
-		"message": "",
+		"message": "Proxy",
 		"description": "data/index.html"
 	},
 	"proxy_auth": {
-		"message": "Authentication",
+		"message": "Authenticatie",
 		"description": "data/index.html"
 	},
 	"proxy_host": {
-		"message": "",
+		"message": "Proxyserver",
 		"description": "data/index.html"
 	},
 	"proxy_http_proxy": {
-		"message": "",
+		"message": "HTTP-proxy",
 		"description": "data/index.html"
 	},
 	"proxy_no_proxy": {
-		"message": "",
+		"message": "Geen proxy",
 		"description": "data/index.html"
 	},
 	"proxy_port": {
-		"message": "",
+		"message": "Proxypoort",
 		"description": "data/index.html"
 	},
 	"proxy_socks_proxy": {
-		"message": "",
+		"message": "SOCKS-proxy",
 		"description": "data/index.html"
 	},
 	"proxy_system_proxy": {
-		"message": "",
+		"message": "Systeemproxy",
 		"description": "data/index.html"
 	},
 	"quick_references": {
@@ -812,11 +812,11 @@
 		"description": "data/index.html"
 	},
 	"quit_hotot": {
-		"message": "Quit Hotot",
+		"message": "Sluit Hotot",
 		"description": "data/index.html"
 	},
 	"quote": {
-		"message": "Quote",
+		"message": "Citeer",
 		"description": "data/index.html"
 	},
 	"read_later": {
@@ -828,39 +828,39 @@
 		"description": "data/index.html"
 	},
 	"relation": {
-		"message": "Relation",
+		"message": "Relatie",
 		"description": "data/js/ui.template.js"
 	},
 	"reload": {
-		"message": "Reload",
+		"message": "Herladen",
 		"description": "data/index.html"
 	},
 	"reply": {
-		"message": "Reply",
+		"message": "Antwoorden",
 		"description": "data/index.html"
 	},
 	"reply_all": {
-		"message": "Reply All",
+		"message": "Iedereen antwoorden",
 		"description": "data/index.html"
 	},
 	"reply_this_tweet": {
-		"message": "Reply this tweet",
+		"message": "Beantwoord deze tweet",
 		"description": "data/js/ui.template.js"
 	},
 	"reply_to": {
-		"message": "reply to",
+		"message": "antwoord naar",
 		"description": "data/js/ui.template.js"
 	},
 	"report_spam": {
-		"message": "Report Spam",
+		"message": "Rapporteer spam",
 		"description": "data/js/ui.template.js"
 	},
 	"reset_time": {
-		"message": "Reset Time",
+		"message": "Tijd resetten",
 		"description": "data/js/lib.twitterapi.js"
 	},
 	"restore_defaults": {
-		"message": "Restore Defaults",
+		"message": "Standaardinstellingen herstellen",
 		"description": "data/index.html"
 	},
 	"retweet": {
@@ -868,19 +868,19 @@
 		"description": "data/index.html"
 	},
 	"retweet_or_un_retweet": {
-		"message": "Retweet/Un-retweet",
+		"message": "Retweeten/Unretweet",
 		"description": "data/index.html"
 	},
 	"retweet_successfully": {
-		"message": "Retweet Successful!",
+		"message": "Retweet succesvol!",
 		"description": "data/js/ui.main.js"
 	},
 	"retweeted_by": {
-		"message": "Retweeted by",
+		"message": "Geretweet door",
 		"description": "data/js/ui.template.js"
 	},
 	"retweeting_dots": {
-		"message": "Retweeting ...",
+		"message": "Retweeten...",
 		"description": "data/js/ui.main.js"
 	},
 	"retweets": {
@@ -888,43 +888,43 @@
 		"description": "data/js/ui.slider.js"
 	},
 	"retweets_view": {
-		"message": "Retweets View",
+		"message": "Retweetsweergave",
 		"description": "data/index.html"
 	},
 	"rt_this_tweet": {
-		"message": "RT this tweet",
+		"message": "RT deze tweet",
 		"description": "data/js/ui.template.js"
 	},
 	"rule": {
-		"message": "Rule",
+		"message": "Regel",
 		"description": "data/index.html"
 	},
 	"rule_based_filter": {
-		"message": "Rule-based Filter",
+		"message": "Regelgebaseerd filter",
 		"description": "data/index.html"
 	},
 	"rule_editor": {
-		"message": "Rule Editor",
+		"message": "Regelbewerken",
 		"description": "data/index.html"
 	},
 	"rule_name": {
-		"message": "Rule Name",
+		"message": "Regelnaam",
 		"description": "data/index.html"
 	},
 	"same_signing_api_base": {
-		"message": "Same Signing API Base",
+		"message": "Gelijke signing-API-basis",
 		"description": "data/index.html"
 	},
 	"same_signing_oauth_base": {
-		"message": "Same Signing OAuth Base",
+		"message": "Gelijke signing-OAuth-basis",
 		"description": "data/index.html"
 	},
 	"save": {
-		"message": "Save",
+		"message": "Opslaan",
 		"description": "data/index.html"
 	},
 	"save_as_draft": {
-		"message": "Save as draft",
+		"message": "Opslaan als concept",
 		"description": "data/index.html"
 	},
 	"schizophrenia": {
@@ -936,31 +936,31 @@
 		"description": "data/index.html"
 	},
 	"search": {
-		"message": "Search",
+		"message": "Zoeken",
 		"description": "data/js/ui.slider.js"
 	},
 	"search_api_base2": {
-		"message": "Search API Base",
+		"message": "Basis zoek-API",
 		"description": "data/index.html"
 	},
 	"search_in_google": {
-		"message": "Search @ in Google",
+		"message": "Zoek @ in Google",
 		"description": "data/index.html"
 	},
 	"search_in_twitter": {
-		"message": "Search @ in Twitter",
+		"message": "Zoek @ in Twitter",
 		"description": "data/index.html"
 	},
 	"search_view": {
-		"message": "Search View",
+		"message": "Searchweergave",
 		"description": "data/index.html"
 	},
 	"select_a_default_picture_service": {
-		"message": "Select a default picture service",
+		"message": "Selecteer een standaard afbeeldingsdienst",
 		"description": "data/index.html"
 	},
 	"select_a_language": {
-		"message": "Select a language",
+		"message": "Selecteer een taal",
 		"description": "data/index.html"
 	},
 	"select_a_read_later_service": {
@@ -972,19 +972,19 @@
 		"description": "data/index.html"
 	},
 	"select_actions": {
-		"message": "Select actions",
+		"message": "Selecteer acties",
 		"description": "data/index.html"
 	},
 	"select_fields": {
-		"message": "Select fields",
+		"message": "Selecteer velden",
 		"description": "data/index.html"
 	},
 	"send_message": {
-		"message": "Send Message",
+		"message": "Stuur bericht",
 		"description": "data/index.html"
 	},
 	"send_message_to_them": {
-		"message": "Send message to them",
+		"message": "Stuur bericht naar hen",
 		"description": "data/js/ui.template.js"
 	},
 	"shiny_old_times_before_marriage": {
@@ -992,39 +992,39 @@
 		"description": "data/index.html"
 	},
 	"shortcuts": {
-		"message": "Shortcuts",
+		"message": "Snelkoppeingen",
 		"description": "data/index.html"
 	},
 	"sign_in_dots": {
-		"message": "Sign in ...",
+		"message": "Inloggen...",
 		"description": "data/js/ui.welcome.js"
 	},
 	"sign_out": {
-		"message": "Sign Out",
+		"message": "Log uit",
 		"description": "data/index.html"
 	},
 	"signing_api_base": {
-		"message": "",
+		"message": "Signing API Base",
 		"description": "data/index.html"
 	},
 	"signing_oauth_base": {
-		"message": "",
+		"message": "Signing OAuth Base",
 		"description": "data/index.html"
 	},
 	"slide_to_next_page": {
-		"message": "Slide to next page",
+		"message": "Schuif naar volgende pagina",
 		"description": "data/index.html"
 	},
 	"slide_to_prev_page": {
-		"message": "Slide to prev page",
+		"message": "Schuif naar vorige pagina",
 		"description": "data/index.html"
 	},
 	"some_error_occur": {
-		"message": "Some Error Occured",
+		"message": "Er trad een fout op",
 		"description": "data/index.html"
 	},
 	"starts_minimized": {
-		"message": "Starts Minimized",
+		"message": "Start geminimaliseerd",
 		"description": "data/index.html"
 	},
 	"stat": {
@@ -1032,15 +1032,15 @@
 		"description": "data/index.html"
 	},
 	"status_is_over_140_characters": {
-		"message": "Status is over 140 characters!",
+		"message": "Bericht is meer dan 140 karakters!",
 		"description": "data/js/ui.status_box.js"
 	},
 	"step_one": {
-		"message": "Step 1",
+		"message": "Stap 1",
 		"description": "data/index.html"
 	},
 	"step_two": {
-		"message": "Step 2",
+		"message": "Stap 2",
 		"description": "data/index.html"
 	},
 	"struggling_adventurers": {
@@ -1048,11 +1048,11 @@
 		"description": "data/index.html"
 	},
 	"successfully": {
-		"message": "Successfully",
+		"message": "Succesvol",
 		"description": "data/js/ui.main.js"
 	},
 	"summon_hotot": {
-		"message": "Summon Hotot (like: <ALT>C)",
+		"message": "Roep Hotot (zoals: <ALT>C)",
 		"description": "data/index.html"
 	},
 	"supervised_by": {
@@ -1060,11 +1060,11 @@
 		"description": "data/index.html"
 	},
 	"themes": {
-		"message": "Themes",
+		"message": "Thema's",
 		"description": "data/index.html"
 	},
 	"this_profile_may_has_already_exists": {
-		"message": "This profile may already exist!",
+		"message": "Dit profiel kan al bestaan!",
 		"description": "data/js/ui.welcome.js"
 	},
 	"titian_s_elegance": {
@@ -1072,7 +1072,7 @@
 		"description": "data/index.html"
 	},
 	"to": {
-		"message": "",
+		"message": "Naar",
 		"description": "data/index.html"
 	},
 	"to_cold_beauty": {
@@ -1080,7 +1080,7 @@
 		"description": "data/index.html"
 	},
 	"toggle_conversation": {
-		"message": "",
+		"message": "Toggle Conversation",
 		"description": "data/index.html"
 	},
 	"tranquil": {
@@ -1096,7 +1096,7 @@
 		"description": "data/js/ui.template.js"
 	},
 	"tweet_view": {
-		"message": "Tweet View",
+		"message": "Tweetweergave",
 		"description": "data/index.html"
 	},
 	"tweets": {
@@ -1112,31 +1112,31 @@
 		"description": "data/index.html"
 	},
 	"type_or_drag_a_photo_here": {
-		"message": "",
+		"message": "Type of sleep hier een foto naar toe",
 		"description": "data/index.html"
 	},
 	"un_favorite_this_tweet_dots": {
-		"message": "Un-favorite this tweet ...",
+		"message": "Unfavorite this tweet...",
 		"description": "data/js/ui.main.js"
 	},
 	"unblock": {
-		"message": "Unblock",
+		"message": "Deblokkeren",
 		"description": "data/js/ui.template.js"
 	},
 	"undo_retweeting_dots": {
-		"message": "Undo retweeting ...",
+		"message": "Retweeten ongedaan maken ...",
 		"description": "data/js/ui.main.js"
 	},
 	"undo_successfully": {
-		"message": "Undo Successful!",
+		"message": "Ongedaan maken succesvol!",
 		"description": "data/js/ui.main.js"
 	},
 	"unfollow": {
-		"message": "",
+		"message": "Ontvolgen",
 		"description": "data/js/ui.listview.js"
 	},
 	"unfollow_at": {
-		"message": "Unfollow @",
+		"message": "Ontvolg @",
 		"description": "data/js/ui.main.js"
 	},
 	"update": {
@@ -1144,39 +1144,39 @@
 		"description": "data/index.html"
 	},
 	"update_successfully": {
-		"message": "Updated Successfully!",
+		"message": "Succesvol bijgewerkt!",
 		"description": "data/js/ui.status_box.js"
 	},
 	"updating_dots": {
-		"message": "Updating ...",
+		"message": "Bijwerken...",
 		"description": "data/js/ui.status_box.js"
 	},
 	"upload": {
-		"message": "Upload",
+		"message": "Uploaden",
 		"description": "data/index.html"
 	},
 	"upload_api_base": {
-		"message": "Upload API Base",
+		"message": "Basis upload-API",
 		"description": "data/index.html"
 	},
 	"upload_photo": {
-		"message": "Upload Photo.",
+		"message": "Foto uploaden.",
 		"description": "data/index.html"
 	},
 	"upload_to_dots": {
-		"message": "Upload to ...",
+		"message": "Uploaden naar...",
 		"description": "data/index.html"
 	},
 	"url_shortener": {
-		"message": "URL shortener",
+		"message": "URL-afkorter",
 		"description": "data/index.html"
 	},
 	"use_custom_font": {
-		"message": "Use Custom Font",
+		"message": "Gebruik aangepast lettertype",
 		"description": "data/index.html"
 	},
 	"use_quote_as_default_retweet_action": {
-		"message": "Use QUOTE as default retweet action",
+		"message": "Gebruik CITEREN als standaard retweetactie",
 		"description": "data/index.html"
 	},
 	"use_read_later_service": {
@@ -1184,19 +1184,19 @@
 		"description": "data/index.html"
 	},
 	"use_reply_all_as_default_reply_action": {
-		"message": "Use REPLY ALL as default reply action",
+		"message": "Gebruik IEDEREEN BEANTWOORDEN als standaard antwoordactie",
 		"description": "data/index.html"
 	},
 	"username": {
-		"message": "",
+		"message": "Gebruikersnaam",
 		"description": "data/index.html"
 	},
 	"verify": {
-		"message": "Verify",
+		"message": "Controleer",
 		"description": "data/index.html"
 	},
 	"version": {
-		"message": "Version",
+		"message": "Versie",
 		"description": "data/js/ui.exts_dlg.js"
 	},
 	"via": {
@@ -1204,7 +1204,7 @@
 		"description": "data/js/ui.template.js"
 	},
 	"view_more_conversation": {
-		"message": "View more conversation",
+		"message": "Bekijk rest converatie",
 		"description": "data/js/ui.template.js"
 	},
 	"virushou_s_integrity": {
@@ -1216,7 +1216,7 @@
 		"description": "data/index.html"
 	},
 	"weakness": {
-		"message": "Weakness",
+		"message": "Zwakte",
 		"description": "data/js/lib.twitterapi.js"
 	},
 	"web": {
@@ -1228,7 +1228,7 @@
 		"description": "data/js/ui.exts_dlg.js"
 	},
 	"whisper": {
-		"message": "Whisper",
+		"message": "Psst",
 		"description": "data/js/ui.welcome.js"
 	},
 	"word1_word2": {
@@ -1244,19 +1244,19 @@
 		"description": "data/index.html"
 	},
 	"you_are_followed_by_them": {
-		"message": "You are followed by them.",
+		"message": "Je wordt gevolgd door hen.",
 		"description": "data/js/ui.peopleview.js"
 	},
 	"you_are_following": {
-		"message": "You are following",
+		"message": "Je volgt.",
 		"description": "data/js/ui.peopleview.js"
 	},
 	"you_are_friends": {
-		"message": "You are friends.",
+		"message": "Jullie zijn vrienden.",
 		"description": "data/js/ui.peopleview.js"
 	},
 	"you_are_not_following_each_other": {
-		"message": "You are not following each other.",
+		"message": "Jullie volgen elkaar niet.",
 		"description": "data/js/ui.peopleview.js"
 	},
 	"you_dont_have_a_view": {

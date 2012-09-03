@@ -15,8 +15,6 @@ displayed: [],
 
 isSliderMenuClosed: true,
 
-isViewSettingMenuClosed: true,
-
 state: null,
 
 FLOAT_ICON: 1,
@@ -126,13 +124,14 @@ function init () {
     });
     
     $('#view_title_bar .setting_btn').click(function () {
-        if (ui.Slider.isViewSettingMenuClosed) {
+        var name = $(this).parent().attr('name');
+        var view = ui.Main.views[name];
+        if (view._header.find('.column_settings:visible').length === 0) {
             ui.Header.closeAll();
-            var name = $(this).parent().attr('name');
-            ui.Slider.openViewSettingMenu(ui.Main.views[name], $(this));
-            ui.Slider.settingView = ui.Main.views[name];
+            ui.Slider.openViewSettingPanel(view, $(this));
+            ui.Slider.settingView = view;
         } else {
-            ui.Slider.closeViewSettingMenu();
+            ui.Slider.closeViewSettingPanel(view);
             ui.Slider.settingView = null;
         }
         return false;
@@ -144,50 +143,7 @@ function init () {
         ui.Slider.settingView = null;
     });
 
-    $('#view_setting_menuitem_notify').click(function () {
-        if (ui.Slider.settingView != null) {
-            ui.Slider.settingView.use_notify 
-                = !ui.Slider.settingView.use_notify; 
-            ui.Slider.state.views[ui.Slider.settingView.name].use_notify
-                = ui.Slider.settingView.use_notify;
-            if (ui.Slider.settingView.use_notify) {
-                $(this).addClass('checked');
-            } else {
-                $(this).removeClass('checked');
-            }
-        }
-        return false;
-    });
 
-    $('#view_setting_menuitem_auto_update').click(function () {
-        if (ui.Slider.settingView != null) {
-            ui.Slider.settingView.use_auto_update 
-                = !ui.Slider.settingView.use_auto_update;
-            ui.Slider.state.views[ui.Slider.settingView.name].use_auto_update
-                = ui.Slider.settingView.use_auto_update;
-            if (ui.Slider.settingView.use_auto_update) {
-                $(this).addClass('checked');
-            } else {
-                $(this).removeClass('checked');
-            }
-        }
-        return false;
-    });
-
-    $('#view_setting_menuitem_sound').click(function () {
-        if (ui.Slider.settingView != null) {
-            ui.Slider.settingView.use_notify_sound 
-                = !ui.Slider.settingView.use_notify_sound;
-            ui.Slider.state.views[ui.Slider.settingView.name].use_notify_sound
-                = ui.Slider.settingView.use_notify_sound;
-            if (ui.Slider.settingView.use_notify_sound) {
-                $(this).addClass('checked');
-            } else {
-                $(this).removeClass('checked');
-            }
-        }
-        return false;
-    });
 
     ui.Slider.view_titles = $('.view_title');
 },
@@ -450,7 +406,7 @@ function slide_to(id) {
     if (conf.get_current_profile()) {
         // @TODO
         if (1) {
-            ui.Slider.me.stop().animate(
+            ui.Slider.me.stop().transition(
                 {marginLeft: (0 - page_offset * width) +'px'}
                 , 500
                 , function () {
@@ -489,13 +445,12 @@ function slide_to(id) {
         return $('#indication .indicator_btn[href="#'+item+'"]');
     });
     if (cur_sel.length == 0) return;
-    $('#indication_light').stop().animate(
-          { 'left': (cur_sel[0].parent().get(0).offsetLeft + 1) + 'px',
-            'width': (
+    $('#indication_light').stop().transition(
+          { 'left': cur_sel[0].parent().get(0).offsetLeft + 1,
+            'width':
                   cur_sel[cur_sel.length - 1].parent().get(0).offsetLeft 
                 + cur_sel[cur_sel.length - 1].parent().width()
-                - cur_sel[0].parent().get(0).offsetLeft  
-                ) + 'px'
+                - cur_sel[0].parent().get(0).offsetLeft
           }
         , 200 
         , function () {
@@ -618,24 +573,22 @@ function closeSliderMenu() {
     ui.Slider.isSliderMenuClosed = true;
 },
 
-openViewSettingMenu:
-function openViewSettingMenu(view, btn) {
-    $('#view_setting_menu').css({'left': (btn.offset().left)+'px', 'top': (btn.offset().top+btn.height())+'px'}).show();
-    $('#view_setting_menu a').each(function (i, n) {
+openViewSettingPanel:
+function openViewSettingPanel(view, btn) {
+    view._header.find('.column_settings').slideDown('fast');
+    view._header.find('.column_settings .mochi_toggle').each(function (i, n) {
         var key = $(n).attr('href').substring(1);
         if (view.hasOwnProperty(key) && view[key] == true) {
-            $(n).addClass('checked');
+            $(n).attr('checked',true).prop('checked', true);
         } else {
-            $(n).removeClass('checked');
+            $(n).attr('checked',false).prop('checked', false);
         }
     });
-    ui.Slider.isViewSettingMenuClosed = false;
 },
 
-closeViewSettingMenu:
-function closeViewSettingMenu() {
-    $('#view_setting_menu').hide();
-    ui.Slider.isViewSettingMenuClosed = true;
+closeViewSettingPanel:
+function closeViewSettingPanel(view) {
+    view._header.find('.column_settings').slideUp('fast');
 },
 
 indicator_btn_drag_start:
@@ -741,6 +694,27 @@ function swap_view(src_name, dst_name) {
     }
 },
 
+
+bind_common_settings:
+function bind_common_settings(view) {
+    view._header.find('.mochi_toggle').change(function () {
+        if (ui.Slider.settingView != null) {
+            var name = $(this).attr('href').substring(1);
+            var val = $(this).prop('checked');
+            ui.Slider.settingView[name] = val; 
+            ui.Slider.state.views[ui.Slider.settingView.name][name] = val;
+            if (val) {
+                $(this).attr('checked',true).prop('checked',true);
+            } else {
+                $(this).attr('checked',false).prop('checked',false);
+            }
+            ui.Slider.save_state();
+            conf.save_prefs(conf.current_name);
+        }
+        return false;
+    });
+},
+
 addDefaultView:
 function addDefaultView(name, opts) {
     if (ui.Main.views.hasOwnProperty(name)) {
@@ -760,7 +734,8 @@ function addDefaultView(name, opts) {
             , 'former': ui.Template.form_search
             , 'init': ui.SearchView.init_view
             , 'destroy': ui.SearchView.destroy_view            
-            , 'header_html': ui.Template.search_header_t
+            , 'header_html': ui.Template.common_column_header_t
+            , 'header_html_ex': ui.Template.search_header_t
             , 'method': 'poll'
             , 'interval': 240
             , 'item_type': 'phoenix_search'
@@ -780,6 +755,7 @@ function addDefaultView(name, opts) {
             , 'loadmore_fail': null
             , 'former': ui.Template.form_tweet
             , 'destroy': ui.Main.destroy_view            
+            , 'header_html': ui.Template.common_column_header_t
             , 'method': 'push'
             , 'interval': 60
             , 'item_type': 'id'
@@ -798,6 +774,7 @@ function addDefaultView(name, opts) {
             , 'loadmore_fail': null
             , 'former': ui.Template.form_tweet
             , 'destroy': ui.Main.destroy_view            
+            , 'header_html': ui.Template.common_column_header_t
             , 'method': 'push'
             , 'interval': 60
             , 'item_type': 'id'
@@ -816,6 +793,7 @@ function addDefaultView(name, opts) {
             , 'loadmore_fail': null
             , 'former': ui.Template.form_dm
             , 'destroy': ui.Main.destroy_view            
+            , 'header_html': ui.Template.common_column_header_t
             , 'method': 'push'
             , 'interval': 120
             , 'item_type': 'id'
@@ -834,7 +812,8 @@ function addDefaultView(name, opts) {
             , 'loadmore_fail': null
             , 'init': ui.RetweetView.init_view
             , 'destroy': ui.RetweetView.destroy_view            
-            , 'header_html': ui.Template.retweets_header_t
+            , 'header_html': ui.Template.common_column_header_t
+            , 'header_html_ex': ui.Template.retweets_header_t
             , 'former': ui.Template.form_tweet
             , 'method': 'poll'
             , 'interval': 120
@@ -858,24 +837,7 @@ function addDefaultView(name, opts) {
             , 'destroy': function (view) {
                     ui.Slider.remove(view.name);
                 }            
-            , 'former': ui.Template.form_tweet
-            , 'method': 'poll'
-            , 'interval': 360
-            , 'item_type': 'page'
-            , 'is_trim': false
-        }, opts));
-    break;
-    case 'trending_topics':
-    ui.Slider.add('trending_topics'
-        , {title: _('trending_topics'), icon:'image/ic_list.png'}
-        , $.extend({ 'type':'tweet', 'title': _('trending_topics')
-            , '_load': ui.TrendingTopicsView.get_trending_topics_local
-            , '_load_success': ui.TrendingTopicsView.get_trending_topics_success
-            , 'init': ui.TrendingTopicsView.init_view
-            , 'destroy': function (view) {
-                    ui.Slider.remove(view.name);
-                }
-            , 'header_html': ui.Template.trending_topics_header_t
+            , 'header_html': ui.Template.common_column_header_t
             , 'former': ui.Template.form_tweet
             , 'method': 'poll'
             , 'interval': 360

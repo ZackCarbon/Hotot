@@ -62,12 +62,36 @@ function init () {
             ui.KismetDlg.guide_dialog.open();
         });
     });
+
     $('#tweet_set_color_btn').click(
     function (ev) {
         var li = $(ui.Main.active_tweet_id);
         var screen_name = li.attr('screen_name');
         ui.KismetDlg.color_guide_dialog.open();
         $('#kismet_color_guide_dialog').data('screen_name', screen_name);
+    });
+
+    $('#tweet_readlater_btn').click(
+    function (ev) {
+        var text = $(ui.Main.active_tweet_id + ' .card_body').children('.text').text();
+        var reg_url = new RegExp('[a-zA-Z]+:\\/\\/(' + ui.Template.reg_url_path_chars_1+'+)');
+        var m = text.match(reg_url);
+        if (m == null){
+            var url = 'http://twitter.com/' + $(ui.Main.active_tweet_id).attr('screen_name') + '/status/' + $(ui.Main.active_tweet_id).attr('tweet_id');
+        } else {
+            var url = m[1];
+        };
+        toast.set('Save to ..').show();
+        globals.readLaterServ.addItem(
+            conf.get_current_profile().preferences.readlater_service,
+            url, text,
+            function (ret) {
+                if (ret.indexOf('200')!=-1 || ret.indexOf('201')!=-1) {
+                    toast.set('Saved!').show();
+                } else {
+                    toast.set('Error Code:' + result).show()
+                }
+            });        
     });
 
     $('#tweet_more_menu').mouseleave(function(){
@@ -518,13 +542,7 @@ function bind_tweet_action(id) {
             if (ev.which != 1 && ev.which != 2) {
                 return;
             }
-            /*
-            var direct_url = $(this).attr('direct_url');
-            if (typeof (direct_url) != 'undefined') {
-                ui.Main.preview_image(direct_url);
-                return false;
-            }
-            */
+
             var link = $(this).attr('href');
             if (conf.vars.platform === 'Chrome') {
                 chrome.tabs.create(
@@ -536,6 +554,7 @@ function bind_tweet_action(id) {
         });
     }
 
+
     $(id).find('a[full_text_id]').unbind().click(function (ev) {
         var full_text_id = $(this).attr('full_text_id');
         globals.network.do_request('GET', 
@@ -543,9 +562,9 @@ function bind_tweet_action(id) {
             {}, {}, null,
             function (result) {
                 if (result && result.full_text) {
-                    $(id).find('.text_inner a').unbind();
-                    $(id).find('.text_inner').empty();
-                    $(id).find('.text_inner').html(
+                    $(id).find('.text_inner:eq(0) a').unbind();
+                    $(id).find('.text_inner:eq(0)').empty();
+                    $(id).find('.text_inner:eq(0)').html(
                         ui.Template.form_text_raw(result.full_text)
                     );
                     ui.Main.bind_tweet_text_action(id);
@@ -557,12 +576,15 @@ function bind_tweet_action(id) {
         return false;
     });
 
-/*
     $(id).find('a[direct_url]').click(function () {
-        ui.Main.preview_image($(this).attr('direct_url'));
+        var direct_url = $(this).attr('direct_url');
+        if (typeof (direct_url) != 'undefined') {
+            ui.Previewer.reload(direct_url);
+            ui.Previewer.open();
+            return false;
+        }
         return false;
     });
-*/
 
     ui.Main.bind_tweet_text_action(id);
 
@@ -863,7 +885,7 @@ function on_fav_click(btn, li_id, event) {
         toast.set(_('favorite_this_tweet_dots')).show(-1);
         globals.twitterClient.create_favorite(id,
         function (result) {
-            toast.set(_('Successfully')).show();
+            toast.set(_('successfully')).show();
             li.addClass('faved');
         });
     }

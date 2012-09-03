@@ -4,7 +4,7 @@ conf = {
 vars: {
       'platform': 'Linux'
     , 'wrapper': 'unknown'
-    , 'version': '0.9.8.4'
+    , 'version': '0.9.8.8'
     , 'codename': 'Ada'
     , 'consumer_key': 'SCEdx4ZEOO68QDCTC7FFUQ'
     , 'consumer_secret': '2IBoGkVrpwOo7UZhjkYYekw0ciXG1WHpsqQtUqZCSw'
@@ -17,7 +17,7 @@ vars: {
 
 default_settings: {
       // Globals:
-      'use_verbose_mode': true
+      'use_verbose_mode': false
       // Globals -> proxy:
     , 'proxy_type': 'none'
     , 'proxy_host': ''
@@ -52,14 +52,22 @@ default_prefs: {
         , 'theme_path': 'theme/New Hope'
         , 'use_custom_font': false
         , 'custom_font': ''
-        , 'font_size': 14
+        , 'font_size': 11
+        , 'line_height': 1.4
+        , 'enable_animation': true
+        , 'enable_gpu_acceleration': true 
           // Behaviors
+        , 'auto_longer_tweet': true
         , 'use_preload_conversation': true
         , 'use_alt_retweet': false
         , 'use_alt_reply': false
         , 'use_media_preview': true
         , 'use_deleted_mark': false
         , 'default_picture_service': 'twitter.com'
+        , 'use_readlater_serv': false
+        , 'readlater_service': 'pocket'
+        , 'readlater_username': ''
+        , 'readlater_password': ''
           // Advanced:
         , 'api_base': 'https://api.twitter.com/1/'
         , 'sign_api_base': 'https://api.twitter.com/1/'
@@ -92,14 +100,22 @@ default_prefs: {
         , 'theme_path': 'theme/New Hope'
         , 'use_custom_font': false
         , 'custom_font': ''
-        , 'font_size': 14
+        , 'font_size': 11
+        , 'line_height': 1.4
+        , 'enable_animation': true
+        , 'enable_gpu_acceleration': true
           // Behaviors
+        , 'auto_longer_tweet': true
         , 'use_preload_conversation': true
         , 'use_alt_retweet': false
         , 'use_alt_reply': false
         , 'use_media_preview': true
         , 'use_deleted_mark': false
         , 'default_picture_service': 'twitter.com'
+        , 'use_readlater_serv': false
+        , 'readlater_service': 'pocket'
+        , 'readlater_username': ''
+        , 'readlater_password': ''
           // Advanced:
         , 'api_base': 'https://identi.ca/api/'
         , 'sign_api_base': 'https://identi.ca/api/'
@@ -267,7 +283,8 @@ function apply_prefs(name, full) {
         i18n.change(prefs.lang);
         change_theme(prefs.theme, prefs.theme_path);
         globals.tweet_font_size = prefs.font_size;
-        $('.card_body > .text').css('font-size', prefs.font_size + 'pt');
+        globals.tweet_line_height = prefs.line_height;
+        $('.card_body > .text').css({'font-size': prefs.font_size + 'pt', 'line-height': prefs.line_height});
         ui.Main.use_preload_conversation = prefs.use_preload_conversation;
         for (var id in ext.exts_info) {
             ext.disable_ext(id);
@@ -286,6 +303,11 @@ function apply_prefs(name, full) {
         $('.listview, .dialog_block p, .card').css('font-family', fonts[1]);
         globals.tweet_font = fonts[1];
     }
+    // animation
+    $.fx.off = !prefs.enable_animation;
+    if ($.fx.off || !prefs.enable_gpu_acceleration) {
+        $.fn.transition = $.fn.animate;
+    }
 
     globals.twitterClient.api_base = prefs.api_base;
     globals.twitterClient.sign_api_base = prefs.sign_api_base;
@@ -300,6 +322,13 @@ function apply_prefs(name, full) {
     oauth.access_token = prefs.access_token;
     oauth.key = prefs.consumer_key || oauth.key;
     oauth.secret = prefs.consumer_secret || oauth.secret;
+    // read later
+    globals.readLaterServ.init(prefs.readlater_username, prefs.readlater_password);
+    if (prefs.use_readlater_serv) {
+        $('#tweet_readlater_btn').parent().show();
+    } else {
+        $('#tweet_readlater_btn').parent().hide();
+    }
 },
 
 load_token:
@@ -313,8 +342,8 @@ function save_token(name, token) {
     conf.save_prefs(name);
 },
 
-clean_token:
-function clean_token(name) {
+clear_token:
+function clear_token(name) {
     conf.profiles[name].preferences.access_token = '';
     conf.save_prefs(name);
 },
@@ -370,7 +399,7 @@ var daily_hints = [
     , 'Wanna quit hotot? try <Ctrl>+Q'
     , 'I can act like VIM!'
     , 'Need more columns? Try to extend my window'
-    , 'Need less columns? Try to resize my window to a small size'
+    , 'Need fewer columns? Try to resize my window to a small size'
     , 'Go to "STAT" page, You\'ll see how addicted to twitter you are'
     , 'This is a ALPHA version, full of bugs, and features'
     , 'すっかり冷え込んだ日にはホットミルクとラブレターが恋しい'

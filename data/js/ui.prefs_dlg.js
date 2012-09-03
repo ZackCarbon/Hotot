@@ -57,6 +57,15 @@ function init () {
         $('#range_prefs_font_size_st').text($(this).val() + 'pt');
         ui.PrefsDlg.update_font_preview();
     });
+    $('#range_prefs_line_height').change(
+    function (event) {
+        $('#range_prefs_line_height_st').text(Number($(this).val()).toFixed(1));
+        ui.PrefsDlg.update_font_preview();
+    });
+
+    $('#chk_prefs_use_readlater_serv').click(function (event) {
+        $('#tbox_prefs_readlater_username, #tbox_prefs_readlater_password, #sel_prefs_readlater_service').attr('disabled', !$(this).prop('checked'));
+    });
 
     $('#chk_prefs_use_same_sign_api_base').click(
     function (event) {
@@ -87,6 +96,11 @@ function init () {
         $('#tbox_prefs_proxy_auth_name, #tbox_prefs_proxy_auth_password').attr('disabled', !$(this).prop('checked'));
     });
 
+    $('#chk_prefs_enable_animation').click(
+    function (event) {
+        $('#chk_prefs_enable_gpu_acceleration').attr('disabled', !$(this).prop('checked'));
+    });
+
     $('#btn_prefs_ok').unbind().click(function (event) {
         var err = ui.FormChecker.check_config_error(
             ui.PrefsDlg.id + ' input');
@@ -105,7 +119,7 @@ function init () {
     });
 
     $('#btn_prefs_restore_defaults').click(function (event) {
-        if (confirm("Restore defaults will erases all changes you make.\n Are you sure you want to continue?!\n"))
+        if (confirm("Restore defaults will erase all changes you make.\n Are you sure you want to continue?!\n"))
             ui.PrefsDlg.restore_defaults();
     });
 
@@ -253,7 +267,12 @@ function load_prefs() {
         $('#sel_prefs_sys_font, #tbox_prefs_custom_font')
             .attr('disabled', true);
     }
+    $('#range_prefs_line_height').val(prefs.line_height);
+    $('#range_prefs_line_height_st').text(Number(prefs.line_height).toFixed(1));
     ui.PrefsDlg.update_font_preview();
+    $('#chk_prefs_auto_longer_tweet')
+        .attr('checked', prefs.auto_longer_tweet)
+        .prop('checked', prefs.auto_longer_tweet);
     $('#chk_prefs_use_preload_conversation')
         .attr('checked', prefs.use_preload_conversation)
         .prop('checked', prefs.use_preload_conversation);
@@ -271,7 +290,26 @@ function load_prefs() {
         .prop('checked', prefs.use_deleted_mark);
     $('#sel_prefs_default_picture_service').val(prefs.default_picture_service);
 
+    $('#chk_prefs_use_readlater_serv')
+        .attr('checked', prefs.use_readlater_serv)
+        .prop('checked', prefs.use_readlater_serv);
+    $('#sel_prefs_readlater_service').val(prefs.readlater_service);
+    $('#tbox_prefs_readlater_username').val(prefs.readlater_username);
+    $('#tbox_prefs_readlater_password').val(prefs.readlater_password);
+    if (prefs.use_readlater_serv) {
+        $('#tbox_prefs_readlater_password, #tbox_prefs_readlater_username, #sel_prefs_readlater_service').attr('disabled', false);
+    } else {
+        $('#tbox_prefs_readlater_password, #tbox_prefs_readlater_username, #sel_prefs_readlater_service').attr('disabled', true);
+    }
+
     // Advanced
+    $('#chk_prefs_enable_animation')
+        .attr('checked', prefs.enable_animation)
+        .prop('checked', prefs.enable_animation);
+    $('#chk_prefs_enable_gpu_acceleration')
+        .attr('disabled', !prefs.enable_animation)
+        .attr('checked', prefs.enable_gpu_acceleration)
+        .prop('checked', prefs.enable_gpu_acceleration);
     $('#tbox_prefs_api_base').val(prefs.api_base);
     $('#tbox_prefs_sign_api_base').val(prefs.sign_api_base);
     $('#tbox_prefs_search_api_base2').val(prefs.search_api_base2);
@@ -296,46 +334,63 @@ save_prefs:
 function save_prefs() {
     var prefs = conf.get_current_profile().preferences;
     // Looks & Feels
-    prefs['lang'] = $('#sel_prefs_lang').val();
+    prefs.lang = $('#sel_prefs_lang').val();
 
-    prefs['theme'] = $('#sel_prefs_theme').val();
-    prefs['theme_path'] = $('#sel_prefs_theme').children('option[value="'+$('#sel_prefs_theme').val()+'"]').attr('path');
-    prefs['custom_font'] = $('#tbox_prefs_custom_font').val();
-    prefs['font_size'] = $('#range_prefs_font_size').val();
-    if (prefs['font_size'] == '') {
-        prefs['font_size'] = 12;
+    prefs.theme = $('#sel_prefs_theme').val();
+    prefs.theme_path = $('#sel_prefs_theme').children('option[value="'+$('#sel_prefs_theme').val()+'"]').attr('path');
+    prefs.custom_font = $('#tbox_prefs_custom_font').val();
+    prefs.font_size = $('#range_prefs_font_size').val();
+    if (prefs.font_size === '') {
+        prefs.font_size = 12;
     }
-    prefs['use_custom_font'] = $('#chk_use_custom_font').prop('checked');
+    prefs.line_height = $('#range_prefs_line_height').val();
+    if (prefs.line_height === '') {
+        prefs.line_height = 1.4;
+    }
+    prefs.use_custom_font = $('#chk_use_custom_font').prop('checked');
     // behaviors
-    prefs['use_preload_conversation']
+    prefs.auto_longer_tweet
+        = $('#chk_prefs_auto_longer_tweet').prop('checked');
+
+    prefs.use_preload_conversation
         = $('#chk_prefs_use_preload_conversation').prop('checked');
-    prefs['use_alt_retweet']
+    prefs.use_alt_retweet
         = $('#chk_prefs_use_alt_retweet').prop('checked');
-    prefs['use_alt_reply']
+    prefs.use_alt_reply
         = $('#chk_prefs_use_alt_reply').prop('checked');
 
-    prefs['use_media_preview']
+    prefs.use_media_preview
         = $('#chk_prefs_use_media_preview').prop('checked');
-    prefs['use_deleted_mark']
+    prefs.use_deleted_mark
         = $('#chk_prefs_use_deleted_mark').prop('checked');
-    prefs['default_picture_service'] = $('#sel_prefs_default_picture_service').val();
+    prefs.default_picture_service
+        = $('#sel_prefs_default_picture_service').val();
+
+    prefs.use_readlater_serv = $('#chk_prefs_use_readlater_serv').prop('checked');
+    prefs.readlater_service = $('#sel_prefs_readlater_service').val();
+    prefs.readlater_username = $('#tbox_prefs_readlater_username').val();
+    prefs.readlater_password = $('#tbox_prefs_readlater_password').val();
 
     // Advanced
-    prefs['api_base']
+    prefs.enable_animation
+        = $('#chk_prefs_enable_animation').prop('checked');
+    prefs.enable_gpu_acceleration
+        = $('#chk_prefs_enable_gpu_acceleration').prop('checked');
+    prefs.api_base
         = $('#tbox_prefs_api_base').attr('value');
-    prefs['sign_api_base']
+    prefs.sign_api_base
         = $('#tbox_prefs_sign_api_base').attr('value');
-    prefs['search_api_base2']
+    prefs.search_api_base2
         = $('#tbox_prefs_search_api_base2').attr('value');
-    prefs['upload_api_base']
+    prefs.upload_api_base
         = $('#tbox_prefs_upload_api_base').attr('value');
-    prefs['oauth_base']
+    prefs.oauth_base
         = $('#tbox_prefs_oauth_base').attr('value');
-    prefs['sign_oauth_base']
+    prefs.sign_oauth_base
         = $('#tbox_prefs_sign_oauth_base').attr('value');
-    prefs['use_same_sign_api_base']
+    prefs.use_same_sign_api_base
         = $('#chk_prefs_use_same_sign_api_base').prop('checked');
-    prefs['use_same_sign_oauth_base']
+    prefs.use_same_sign_oauth_base
         = $('#chk_prefs_use_same_sign_oauth_base').prop('checked');
     // apply & save
     conf.apply_prefs(conf.current_name, true);
@@ -358,8 +413,7 @@ function update_font_preview() {
             , $('#chk_use_custom_font').prop('checked')
                 ? $('#tbox_prefs_custom_font').val()
                     : conf.get_default_font_settings())
-        .css('font-size'
-            , $('#range_prefs_font_size').val() + 'pt');
+        .css({'font-size': $('#range_prefs_font_size').val() + 'pt', 'line-height': $('#range_prefs_line_height').val()});
 }
 
 }

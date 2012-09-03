@@ -40,14 +40,22 @@ function init_view(view) {
     var sub_view_btns = toggle.find('.mochi_button_group_item');
     sub_view_btns.click(function (event) {
         var pagename = $(this).attr('href').substring(1);
-        if (pagename == 'list') {
-            toggle.find('.lists_memu').toggle();
+        if (pagename === 'list') {
+            toggle.find('.lists_menu').toggle();
+        } else if (pagename === 'people') {
+            toggle.find('.people_menu').toggle();
         } else {
             var a = $(this).attr("name");
             sub_view_btns.not(this).removeClass('selected');
             $(this).addClass('selected');
             ui.PeopleView.switch_sub_view(view, pagename);
         }
+        return false;
+    });
+
+    vcard.find('.profile_img_wrapper').click(function() {
+        ui.Previewer.reload($(this).attr('href'))
+        ui.Previewer.open();
         return false;
     });
 
@@ -60,7 +68,7 @@ function init_view(view) {
             function () {
                 toast.set(
                     _("unfollow_at")+ view.screen_name+" Successfully!").show();
-                $(_this).text(_("follow")).removeClass('unfo').removeClass('red').addClass('blue');
+                $(_this).text(_("follow")).removeClass('unfo').addClass('blue');
             });
         } else {
             toast.set(_("follow_at") + view.screen_name + " ...").show();
@@ -68,7 +76,7 @@ function init_view(view) {
             function () {
                 toast.set(
                     _("follow_at")+ view.screen_name+" Successfully!").show();
-                $(_this).text(_("unfollow")).addClass('unfo').removeClass('blue').addClass('red');
+                $(_this).text(_("unfollow")).addClass('unfo').removeClass('blue');
             });
         }
     });
@@ -161,12 +169,54 @@ function init_view(view) {
         people_action_more_memu.hide();
     });
 
-    var lists_memu = toggle.find('.lists_memu');
-    toggle.find('.people_view_list_trigger').mouseleave(function () {
-        lists_memu.hide();
+    var people_menu = toggle.find('.people_menu');
+    toggle.find('.people_view_people_trigger').mouseleave(function () {
+        people_menu.hide();
     });
 
-    lists_memu.find('.user_lists_menu_item').click(function () {
+    people_menu.find('.followers_menu_item').click(function () {
+        view.is_trim = false;
+        view.item_type = 'cursor';
+        view.cursor = '';
+        view.former = ui.Template.form_people;
+        view._load = ui.PeopleView.load_follower;
+        view._loadmore = ui.PeopleView.loadmore_follower;
+        view._load_success = ui.Main.load_people_success;
+        view._loadmore_success = ui.Main.loadmore_people_success;
+
+        people_menu.hide();
+        sub_view_btns.removeClass('selected');
+        $('.people_view_people_btn').addClass('selected');
+        view.clear();
+        view.load();
+
+        return false;
+    });
+
+    people_menu.find('.friends_menu_item').click(function () {
+        view.is_trim = false;
+        view.item_type = 'cursor';
+        view.cursor = '';
+        view.former = ui.Template.form_people;
+        view._load = ui.PeopleView.load_friend;
+        view._loadmore = ui.PeopleView.loadmore_friend;
+        view._load_success = ui.Main.load_people_success;
+        view._loadmore_success = ui.Main.loadmore_people_success;
+
+        people_menu.hide();
+        sub_view_btns.removeClass('selected');
+        $('.people_view_people_btn').addClass('selected');
+        view.clear();
+        view.load();
+        return false;
+    });
+
+    var lists_menu = toggle.find('.lists_menu');
+    toggle.find('.people_view_list_trigger').mouseleave(function () {
+        lists_menu.hide();
+    });
+
+    lists_menu.find('.user_lists_menu_item').click(function () {
         view.is_trim = false;
         view.item_type = 'cursor';
         view.cursor = '';
@@ -175,7 +225,7 @@ function init_view(view) {
         view._loadmore = ui.PeopleView.loadmore_lists;
         view._load_success = ui.Main.load_list_success;
         view._loadmore_success = ui.Main.loadmore_list_success;
-        lists_memu.hide();
+        lists_menu.hide();
         sub_view_btns.removeClass('selected');
         $('.people_view_list_btn').addClass('selected');
         view.clear();
@@ -183,7 +233,7 @@ function init_view(view) {
         return false;
     });
 
-    lists_memu.find('.listed_lists_menu_item').click(function () {
+    lists_menu.find('.listed_lists_menu_item').click(function () {
         view.is_trim = false;
         view.item_type = 'cursor';
         view.cursor = '';
@@ -192,7 +242,7 @@ function init_view(view) {
         view._loadmore = ui.PeopleView.loadmore_listed_lists;
         view._load_success = ui.Main.load_list_success;
         view._loadmore_success = ui.Main.loadmore_list_success;
-        lists_memu.hide();
+        lists_menu.hide();
         sub_view_btns.removeClass('selected');
         $('.people_view_list_btn').addClass('selected');
         view.clear();
@@ -200,13 +250,20 @@ function init_view(view) {
         return false;
     });
     
-    lists_memu.find('.create_list_menu_item').click(function () {
+    lists_menu.find('.create_list_menu_item').click(function () {
         ui.ListAttrDlg.load(globals.myself.screen_name,'');
         globals.list_attr_dialog.open(); 
-        lists_memu.hide();
+        lists_menu.hide();
         return false;
     });
-    
+
+    view._header.find('.expand').click(function () {
+        if (vcard.is(':hidden')) {
+            vcard.slideDown('fast');
+        } else {
+            vcard.slideUp('fast');
+        }
+    });
 },
     
 destroy_view:
@@ -215,6 +272,7 @@ function destroy_view(view) {
     var vcard = view._header.find('.people_vcard');
     vcard.find('.button').unbind();
     vcard.find('.radio_group_btn').unbind();
+    view._header.find('expand').unbind();
     // remove slide, view and DOM
     ui.Slider.remove(view.name);
 },
@@ -241,26 +299,6 @@ function switch_sub_view(view, name) {
         view._loadmore = ui.PeopleView.loadmore_fav;
         view._load_success = ui.Main.load_tweet_success;
         view._loadmore_success = ui.Main.loadmore_tweet_success;
-    break;
-    case 'friend':
-        view.is_trim = false;
-        view.item_type = 'cursor';
-        view.cursor = '';
-        view.former = ui.Template.form_people;
-        view._load = ui.PeopleView.load_friend;
-        view._loadmore = ui.PeopleView.loadmore_friend;
-        view._load_success = ui.Main.load_people_success;
-        view._loadmore_success = ui.Main.loadmore_people_success;
-    break;
-    case 'follower':
-        view.is_trim = false;
-        view.item_type = 'cursor';
-        view.cursor = '';
-        view.former = ui.Template.form_people;
-        view._load = ui.PeopleView.load_follower;
-        view._loadmore = ui.PeopleView.loadmore_follower;
-        view._load_success = ui.Main.load_people_success;
-        view._loadmore_success = ui.Main.loadmore_people_success;
     break;
     default: break;
     }
@@ -345,9 +383,9 @@ function render_people_view(self, user_obj, proc) {
             if (rel == 1 || rel == 3) {
                 btn_follow.text(_("unfollow"));
                 btn_follow.addClass('unfo');
-                btn_follow.addClass('red').removeClass('blue');
+                btn_follow.removeClass('blue');
             } else {
-                btn_follow.removeClass('red').addClass('blue');
+                btn_follow.addClass('blue');
             }
     });
     ui.Slider.set_icon(self.name, user_obj.profile_image_url, ui.Slider.BOARD_ICON);

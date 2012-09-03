@@ -22,8 +22,8 @@ function check_proc() {
 
 notify:
 function notify(title, summary, image, type) {
-    title = title.replace(/&gt;/g, '>').replace(/&lt;/g, '<');
-    summary = summary.replace(/&gt;/g, '>').replace(/&lt;/g, '<');
+    title = title.replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
+    summary = summary.replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&');
     if (util.is_native_platform()) {
         hotot_action('system/notify/'
             + type
@@ -32,26 +32,9 @@ function notify(title, summary, image, type) {
             + '/' + encodeURIComponent(image));
     } else if (conf.vars.platform == 'Chrome') {
         var img_url = image? image: './image/ic64_hotot.png';
-        var linux_native_notification_id = 'dbmjjjonelodfeckmpfglmffhngdplal';
-
-        chrome.management.get(linux_native_notification_id, function(result) {
-            if (result != undefined && result.enabled) {
-                console.log(result);
-
-                chrome.extension.sendRequest(linux_native_notification_id,
-                {
-                    title: title, body: summary, iconUrl: img_url, notificationType: type
-                },
-                function(response)
-                {
-                    console.log(response);
-                });
-            } else {
-                var notification = webkitNotifications.createNotification(img_url, title, summary);
-                notification.show();
-                setTimeout(function() {notification.cancel()}, 5000);
-            }
-        });
+        var notification = webkitNotifications.createNotification(img_url, title, summary);
+        notification.show();
+        setTimeout(function() {notification.cancel()}, 5000);
     }
 },
 
